@@ -24,6 +24,8 @@
 /config/credentials.yml.enc
 /config/initializers/carrierwave.rb
 .env
+.env.production
+.env.development
 .env.* 
 /secrets.yml
 /secrets.yml.enc
