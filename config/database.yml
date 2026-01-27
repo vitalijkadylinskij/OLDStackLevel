@@ -1,16 +1,29 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: <%= ENV['POSTGRES_USER'] || 'postgres' %>
-  password: <%= ENV['POSTGRES_PASSWORD'] || 'mysecretpassword' %>
-  host: <%= ENV['POSTGRES_HOST'] %>
-  port: <%= ENV['POSTGRES_PORT'] || 5432 %>
   pool: 5
+  timeout: 5000
 
 development:
   <<: *default
-  database: <%= ENV['POSTGRES_DB'] || 'stacklevel_development' %>
+  database: stacklevel_development
+  username: postgres
+  password: 12345678
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: stacklevel_test
+  username: postgres
+  password: 12345678
+  host: localhost
+  port: 5432
 
 production:
   <<: *default
-  database: <%= ENV['POSTGRES_DB'] || 'stacklevel_production' %>
+  database: <%= ENV['POSTGRES_DB'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
+  port: 5432
