@@ -1,0 +1,19 @@
+.cp__header
+  h2 Hire Developers
+  .cp_header_link
+    = link_to 'RU', cp_hire_developers_path(locale: "ru"), class: 'locale_link'
+    |&nbsp;
+    = link_to 'EN', cp_hire_developers_path(locale: 'en'), class: 'locale_link'
+    |&nbsp;
+    = link_to 'All', cp_hire_developers_path(locale: nil), class: 'locale_link'
+    |&nbsp;
+    = link_to 'NEW DEVELOPER', new_cp_hire_developer_path, class: 'locale_link'
+
+.c.cp__content
+  - @hire_developers.each do |hire_developer|
+    = link_to hire_developer.developer_title, edit_cp_hire_developer_path(hire_developer)
+    br
+    b = link_to 'EDIT', edit_cp_hire_developer_path(hire_developer)
+    |&nbsp;
+    b = link_to 'DELETE', cp_hire_developer_path(hire_developer), method: :delete, data: { confirm: 'Are you sure?' }
+    hr

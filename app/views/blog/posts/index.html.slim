@@ -1,0 +1,27 @@
+= render 'shared/header'
+
+.team-section
+  .shared__section-title
+    .shared__width-wrapper
+      .shared__section-title__content--hasButton
+        .shared__section-title__content--hasButton__submain
+          .submain-tagline = 'Blog'
+          .shared__section-title__content__vector.case-default
+            = inline_svg("title-dots.svg")
+
+.list-section
+  .shared__width-wrapper
+    ul.list-items
+        - @posts.each do |post|
+            li.list-item
+                = link_to blog_post_path(post.slug), class: "case-link"
+                    .img-background style="background-image: url(#{image(post.preview_image_url(:prev))})"
+                    .list-item__content.case_study--faded
+                      .post-list-item__content-container
+                        .post-content
+                          .post-title
+                            = post.title
+                          .post-teaser
+                            = post.teaser
+
+= render 'shared/footer'

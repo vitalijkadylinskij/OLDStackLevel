@@ -1,0 +1,10 @@
+p#notice = notice
+- markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+h1 = @post.title
+= raw markdown.render(@post.body)
+br
+p = @post.slug
+
+= link_to 'Edit', edit_cp_blog_post_path(@post)
+'|
+= link_to 'Back', cp_blog_posts_path

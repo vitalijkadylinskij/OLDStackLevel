@@ -1,0 +1,48 @@
+= render 'shared/header'
+
+.shared__section-title
+  .shared__width-wrapper
+    .shared__section-title__content--hasButton
+      .shared__section-title__content--hasButton__submain
+        .submain-tagline = @development.title.html_safe
+        .submain-button.blue.trigger = raw t('hire-developers.request-developer')
+        .shared__section-title__content__vector.case-default
+          = inline_svg("title-dots.svg")
+
+.hire-developers__section-main
+  .shared__width-wrapper
+    h2 = @development.description
+
+    .hire-developers__section-main--description = @development.sub_description
+
+    h2 = "#{t('hire-developers.what-is')} #{@development.path_name}?" 
+    .hire-developers__section-main--description = @development.what_is
+
+    h2 = "#{t('hire-developers.where-to-use')}?"
+    .hire-developers__section-main--description = @development.where_to_use_title.html_safe
+    .hire-developers__section-main--description = @development.where_to_use_cases.html_safe
+
+    .hire-developers__section-main--reasons
+      h2 = "#{t('hire-developers.why')} #{@development.path_name}?"
+      - @development.why_reasons.each_line do |line|
+        h3 = line[0, line.index('<br>')]
+        .hire-developers__section-main--description = line[line.index('<br>')+4..-1]
+
+    h2 = "#{t('hire-developers.what-can-we-do')}?"
+    .hire-developers__section-main--description = @development.what_can_we_do
+
+
+    .case-study__section--reviews__questions
+      .reviews__questions-item
+        = link_to '', hire_developers_path, class: 'reviews__link'
+        div = raw t('case-studies.hire-developer') 
+      .reviews__questions-item 
+        = link_to '',hire_team_index_path, class: 'reviews__link'  
+        div = raw t('case-studies.hire-team')
+
+= render 'shared/footer'
+        
+
+
+
+    

@@ -1,0 +1,52 @@
+# ----------------------------
+# Системные файлы
+# ----------------------------
+*.swp
+*.swo
+*.DS_Store
+*.log
+
+# ----------------------------
+# Rails
+# ----------------------------
+/log/*
+!/log/.keep
+/tmp
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/system
+/public/uploads
+
+# ----------------------------
+# Secrets и конфиги
+# ----------------------------
+/config/master.key
+/config/credentials.yml.enc
+/config/initializers/carrierwave.rb
+.env
+.env.* 
+/secrets.yml
+/secrets.yml.enc
+/aws.yml
+/*.pem
+
+# ----------------------------
+# Bundler
+# ----------------------------
+/.bundle
+/vendor/bundle
+/vendor/cache
+
+# ----------------------------
+# Node / Yarn
+# ----------------------------
+/node_modules
+/yarn-error.log
+/package-lock.json
+
+# ----------------------------
+# Docker
+# ----------------------------
+/tmp/pids
+/tmp/cache
+/tmp/sockets

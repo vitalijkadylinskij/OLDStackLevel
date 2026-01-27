@@ -1,0 +1,48 @@
+= render 'shared/header', css: 'black', logo: true
+
+/ .shared__section-title
+/     .shared__width-wrapper
+/         .shared__section-title__content
+/             .shared__section-title__content__main
+/                 .main__path
+/                     = link_to root_path do
+/                         = raw t('about-us.main') 
+/                     span&nbsp;&#47&nbsp;
+/                 .main__path--current = raw t('about-us.submain')
+/             .shared__section-title__content__submain 
+/                 div = raw t('about-us.subtitle')
+/                 .shared__section-title__content__vector.case-default
+/                     = inline_svg("hire_developers/vector1.svg")
+
+.about-us__section--wrapper
+    / .about-us__section--bg-dots
+    .about-us__section
+        .about-us__section__child
+            .section__child__logo
+                = inline_svg('new-logo.svg')
+
+        .about-us__section__child 
+            .about-us__section__child__description
+                p = raw t('about-us.text-1')
+                p = raw t('about-us.text-2')
+                p = raw t('about-us.text-3')
+            img src = image_path("hire_team/v-vector.svg")
+
+            
+
+    .about-us__section-dots
+        .shared__width-wrapper
+            / .section__child__dots
+            /     = inline_svg('grid-dots-1.svg')
+            .about-us__section__description
+                / p = raw t('about-us.text-4')
+                .feedback-slider__item
+                    .feedback__content
+                        img.feedback__photo src=image_path("persons/max.jpg")
+                        .feedback__text
+                            h4.feedback__text_author = raw t('about-us.ceo.name')
+                            p.feedback__text_comment = raw t('about-us.ceo.comment')
+                            p.feedback__text_job CEO STACKLEVEL GROUP
+                        img.feedback__quotes src=image_path("_quotes.svg")
+
+= render 'shared/footer'

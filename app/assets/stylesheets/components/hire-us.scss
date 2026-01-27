@@ -1,0 +1,22 @@
+@import '../variables';
+
+.hire-us {
+  padding: 6vw 25vw;
+  background: #282b36;
+  text-align: center;
+
+  &--services {
+    background: #ed3e44;
+
+    .action__button {
+      color: #ed3e44;
+      background: #fff;
+      }
+    }
+  }
+
+.hire-us__title {
+  font-size: 1.5vw;
+  color: #fff;
+  line-height: $line-height;
+  }

@@ -1,0 +1,71 @@
+
+= render "shared/header"
+
+.shared__section-title
+    .shared__width-wrapper
+        .shared__section-title__content--hasButton
+            .shared__section-title__content--hasButton__submain
+                .submain-tagline = raw t('hire-team.subtitle') 
+                .submain-button.white.trigger = raw t('hire-team.request-team') 
+                .shared__section-title__content__vector.case-default
+                    = inline_svg("title-dots.svg")
+
+.hire-team__section-steps
+    .shared__width-wrapper 
+        .shared__page-left__vector.hire-team__case-left
+            = inline_svg('grid-dots-1.svg')  
+        .section-step__title.shared__sections-subtitles = raw t('hire-team.step-title')
+        .section-step__content
+            .section-step__content__step
+                h4 = raw t('hire-team.step') + ' 1'
+                p = raw t('hire-team.step-1')
+                .arrow-vector__container
+                    = inline_svg ('hire_team/arrow-vector.svg')
+                    = inline_svg ('hire_team/arrow-vector-small.svg')
+            .section-step__content__step
+                h4 = raw t('hire-team.step') + ' 2' 
+                p = raw t('hire-team.step-2')
+                .arrow-vector__container
+                    = inline_svg ('hire_team/arrow-vector.svg')
+                    = inline_svg ('hire_team/arrow-vector-small.svg')
+            .section-step__content__step
+                h4 = raw t('hire-team.step')  + ' 3'
+                p = raw t('hire-team.step-3')
+.hire-team__section-includes
+    .shared__width-wrapper
+        .section-includes__title.shared__sections-subtitles = raw t('hire-team.team-include-title')
+        .section-includes__content
+            .section-includes__content__item
+                h4 = raw t('hire-team.project-manager')
+                p = raw t('hire-team.project-manager-description')
+            .section-includes__content__item
+                h4 = raw t('hire-team.business-analyst')
+                p = raw t('hire-team.business-analyst-description')
+            .section-includes__content__item
+                h4 = raw t('hire-team.designer')
+                p = raw t('hire-team.designer-description')
+            .section-includes__content__item
+                h4 = raw t('hire-team.developers')
+                p = raw t('hire-team.developers-description')
+            .section-includes__content__item
+                h4 = raw t('hire-team.QA')
+                p = raw t('hire-team.QA-description')
+        .section-includes__button.blue.trigger = raw t('hire-team.request-team')
+
+- if @case_studies.length != 0
+    .hire-team__section-projects
+        .shared__width-wrapper
+            .section-projects__title.shared__sections-subtitles = raw t('hire-team.accomplished-projects')
+            .section-projects__content
+                - @case_studies.each do |item|
+                    = link_to case_study_path(item.path_name), class: "case-link"
+                        .item-square 
+                            .section-project__content-item.case_study--faded style="background-image: url(#{image(item.project_bg)}); background-size: cover"
+                                p = item.project_title
+
+.hire-team__section-feedbacks
+    = render "shared/feedbacks"
+
+= render 'shared/footer'
+            
+            

@@ -1,0 +1,43 @@
+.footer
+  .footer__dots
+  .footer__about-us__logo 
+    = inline_svg("_we-are.svg")
+  .footer__block
+    .about-us__block
+      .about-us__points
+        .about-us__item 
+          div = raw t('footer.team-developers')
+        .about-us__item 
+          div = raw t('footer.years-on-market')
+        .about-us__item 
+          div = raw t('footer.completed-projects')
+        .about-us__item 
+          div = raw t('footer.returned-customers')
+        .about-us__item 
+          div = raw t('footer.positive-testimonials')
+        = link_to "#{t('footer.more-about-us')}", about_us_path, class: "button__about-us"
+  .footer__down-block--bg
+  .footer__down-block
+    .contact__block
+      .about-us__contact
+        .contact__logo-block
+          img.contact__logo src=image_path('_logo_white.svg')
+          .button__hire-us.trigger = raw t('footer.hire-us')
+          / = link_to "#{t('footer.hire-us')}", case_studies_path, class: "button__hire-us"
+        .contact__connect
+          h3.contact__header = t('footer.contact-header')
+          .contact__connect--linked
+            a.contacts__tel href="tel:+375293444489" +375 (29) 344-44-89
+            a.contacts__mail href="mailto:contact@stacklevel.org" contact@stacklevel.org
+        .contact__social-nets
+          h3.contact__header = t('footer.be-in-touch-header')
+          .social-nets__icons
+            a.icon href="https://www.linkedin.com/company/stacklevel"
+              img src=image_path('social/_linkedin.svg')
+            a.icon href="https://www.instagram.com/stacklevel_group/"
+              img src=image_path('social/_instagram.svg')
+            a.icon href="https://www.facebook.com/stacklevel"
+              img src=image_path('social/_fb.svg')
+
+= render 'shared/modal'
+  

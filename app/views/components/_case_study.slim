@@ -1,0 +1,78 @@
+= render 'shared/header'
+
+.case-study__section--title style="#{project_bg && "background: url(#{project_bg}) no-repeat center; background-size: cover"}"
+  .shared__width-wrapper
+      .case-study__section--title__marketplace-content 
+        .t-marketplace-content = project_title
+        .t-marketplace-content__description
+          .content__description-item
+            .h4 = raw t('case-studies.business_domains') + ':'
+            .p = business_domains.join(', ')
+          / .content__description-item
+          /   .h4 = raw t('case-studies.responsibilities') + ':'
+          /   .p Management, UX/UI
+          / .content__description-item
+          /   .h4 = raw t('case-studies.development') + ':'
+          /   .p
+          .content__description-item
+            .h4 = raw t('case-studies.key_technologies') + ':'
+            .p = technologies.join(', ')
+
+.case-study__section-main
+  .shared__width-wrapper
+    .section-common
+      .shared__sections-subtitles = raw t('case-studies.business-challenge')
+      div.t-descriptions-item__description = business_challenge.html_safe
+    .section-common
+      .section__facts
+        .fact
+          .title = raw t('case-studies.section')
+          .description = section
+        .fact
+          .title = raw t('case-studies.technology')
+          .description = technology
+        .fact
+          .title = raw t('case-studies.duration')
+          .description = duration
+        .fact
+          .title = raw t('case-studies.team')
+          .description = team
+    .section-common
+      .shared__sections-subtitles = raw t('case-studies.solution')
+      div.t-descriptions-item__description = solution.html_safe
+    .section-common
+      .shared__sections-subtitles = raw t('case-studies.result')
+      div.t-descriptions-item__description = result.html_safe
+    - if screenshots.length > 0
+      .section-common.screenshots-carousel
+        .screenshots-examples--nav
+          .screenshots-examples__prev
+          .screenshots-examples__next
+        .screenshots-examples--wrapper
+          .screenshots-examples.owl-carousel
+            - screenshots.each do |i|
+              .item
+                a href = i
+                  img src = i style="height: 300px; object-fit: cover" 
+
+    .section-common
+      .shared__sections-subtitles = raw t('case-studies.proud_of')
+      div.t-descriptions-item__description = proud_of.html_safe
+
+    .case-study__section--reviews__questions
+      .reviews__questions-item
+        = link_to '', hire_developers_path, class: 'reviews__link'
+        div = raw t('case-studies.hire-developer')
+      .reviews__questions-item
+        = link_to '',hire_team_index_path, class: 'reviews__link'
+        div = raw t('case-studies.hire-team')
+
+  .case-study__section--reviews
+    = render 'shared/feedbacks'
+
+= render 'shared/footer'
+
+
+
+
+

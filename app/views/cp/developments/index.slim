@@ -1,0 +1,21 @@
+.cp__header
+  h2 Developments
+  .cp_header_link
+    = link_to 'RU', cp_developments_path(locale: "ru"), class: 'locale_link'
+    |&nbsp;
+    = link_to 'EN', cp_developments_path(locale: 'en'), class: 'locale_link'
+    |&nbsp;
+    = link_to 'DE', cp_developments_path(locale: 'de'), class: 'locale_link'
+    |&nbsp;
+    = link_to 'All', cp_developments_path, class: 'locale_link'
+    |&nbsp;
+    = link_to 'NEW DEVELOPMENT', new_cp_development_path, class: 'locale_link'
+
+.cp__content
+  - @developments.each do |development|
+    = link_to development.title.html_safe, cp_development_path(development)
+    br
+    b = link_to 'EDIT', edit_cp_development_path(development)
+    |&nbsp;
+    b = link_to 'DELETE', cp_development_path(development), method: :delete, data: { confirm: 'Are you sure?' }
+    hr

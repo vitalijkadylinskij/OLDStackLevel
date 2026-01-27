@@ -1,0 +1,22 @@
+ruby:
+  data = {
+    project_title: @case_study.project_title,
+    project_bg: image(@case_study.project_bg),
+    business_case_description: @case_study.business_case_description,
+    solution: @case_study.developted_solution_description || '',
+    technologies: project_technologies(@case_study),
+    business_challenge: @case_study.business_challenge || '',
+    proud_of: @case_study.proud_of || '',
+    result: @case_study.result || '',
+    section: @case_study.section,
+    technology: @case_study.technology,
+    duration: @case_study.duration,
+    team: @case_study.team,
+    customer: @case_study.customer,
+    second_solution: @case_study.second_solution,
+    third_solution: @case_study.third_solution,
+    business_domains: project_domains(@case_study),
+    screenshots: @case_study.screenshots
+  }
+
+= render :partial => 'components/case_study', :locals => data

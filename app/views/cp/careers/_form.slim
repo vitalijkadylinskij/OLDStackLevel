@@ -1,0 +1,34 @@
+script[type="text/javascript"]
+  |  $('.chosen-select').chosen({ allow_single_deselect: true, no_results_text: 'No results matched', width: '100%' });
+
+= form_for [:cp, @career], as: :career do |f|
+  - if @career.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@career.errors.count, "error")} prohibited this meta information from being saved:"
+      ul
+        - @career.errors.full_messages.each do |message|
+          li = message
+
+  .cp-form-item
+    = label_tag(:locale, "Project Locale:")
+    br
+    = f.select :locale, I18n.available_locales , { include_blank: false }
+
+  .cp-form-item
+    = label_tag("Seniority:")
+    = f.text_field :title, placeholder: 'Middle PHP Developer ', class: 'input'
+
+  .cp-form-item
+    = label_tag("Description:")
+    = f.trix_editor :description, placeholder: 'Description', class: 'input'
+
+  / .cp-form-item
+  /   = label_tag("Technologies:")
+  /   = f.select :technology_ids, Technology.pluck(:name, :id) , { include_blank: true }, { multiple: true, class: 'chosen-select', data: { placeholder: "Project technologies" } }
+  
+  / .cp-form-item
+  /   = label_tag("Frameworks:")
+  /   = f.select :framework_ids, Framework.pluck(:name, :id) , { include_blank: true }, { multiple: true, class: 'chosen-select', data: { placeholder: "Project technologies" } }
+  
+  .actions = f.submit
+

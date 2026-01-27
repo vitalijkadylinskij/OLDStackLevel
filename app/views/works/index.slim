@@ -1,0 +1,129 @@
+section.works-section
+  = render 'shared/header', css: 'black', logo: true
+
+  .works-section__title  = raw t('works.title')
+
+.works-section__projects
+    /= link_to sport_management_url, class: "works-section__project works-section__project--2 works-section__project--half"
+      .works-section__overlay
+      .works-section__project-bg style="background-image: url(#{image_path('hockey_bg_1.jpg')})"
+      .works-section__project-info
+        .works-section__project-title Management and Recruitment System For Hockey Industry
+
+    = link_to moscow_city_duma_url, class: "works-section__project"
+      .works-section__overlay
+      .works-section__project-bg style="background-image: url(#{image_path('duma-preview.png')})"
+      .works-section__project-info
+        .works-section__project-title Web-based government management system
+        .works-section__project-services
+          .works-section__project-service Software Product Development
+          .works-section__project-service Support Maintenance
+          .works-section__project-service Software Testing
+          .works-section__project-service Migration from Legacy System
+          .works-section__project-service Mobile Development
+        .works-section__project-technologies
+          .works-section__project-technology PHP 7
+          .works-section__project-technology Symfony
+          .works-section__project-technology MySQL
+          .works-section__project-technology Redis
+          .works-section__project-technology RabbitMQ
+        .works-section__project-footer
+          .works-section__project-industry Government
+          .works-section__project-location Russian Federation
+
+    /= link_to tams_url, class: "works-section__project"
+      .works-section__overlay
+      .works-section__project-bg style="background-image: url(#{image_path('airport-staff.jpg')})"
+      .works-section__project-info
+        .works-section__project-title SHIFT PLANNING & MANAGEMENT SYSTEM FOR AIRPORT STAFF
+
+    /= link_to bank_url, class: "works-section__project"
+      .works-section__overlay
+      .works-section__project-bg style="background-image: url(#{image_path('bank_bg_2.jpg')})"
+      .works-section__project-info
+        .works-section__project-title FULL-SERVICE BANKING SYSTEM
+
+    /= link_to electronic_workflow_url, class: "works-section__project"
+      .works-section__overlay
+      .works-section__project-bg style="background-image: url(#{image_path('airport-staff.jpg')})"
+      .works-section__project-info
+        .works-section__project-title Electronic document management system
+
+    /= link_to papajobs_url, class: "works-section__project"
+      .works-section__overlay
+      .works-section__project-bg style="background-image: url(#{image_path('papajobs.png')})"
+      .works-section__project-info
+        .works-section__project-title Recruitment management system for service sector
+        .works-section__project-services
+          .works-section__project-service Software Product Development
+          .works-section__project-service Support Maintenance
+          .works-section__project-service Software Testing
+          .works-section__project-service Migration from Legacy System
+          .works-section__project-service Mobile Development
+        .works-section__project-technologies
+          .works-section__project-technology PHP 7
+          .works-section__project-technology Symfony
+          .works-section__project-technology MySQL
+          .works-section__project-technology Redis
+          .works-section__project-technology RabbitMQ
+        .works-section__project-footer
+          .works-section__project-industry Goverment
+          .works-section__project-location Russia
+
+    /= link_to papajobs_url, class: "works-section__project works-section__project--2 works-section__project--half"
+      .works-section__overlay
+      .works-section__project-bg style="background-image: url(#{image_path('papajobs.png')})"
+      .works-section__project-info
+        .works-section__project-title Applicant tracking system for a jobseekers platform
+        .works-section__project-services
+          .works-section__project-service Software Product Development
+          .works-section__project-service Support Maintenance
+          .works-section__project-service Software Testing
+          .works-section__project-service Migration from Legacy System
+          .works-section__project-service Mobile Development
+        .works-section__project-technologies
+          .works-section__project-technology PHP 7
+          .works-section__project-technology Symfony
+          .works-section__project-technology MySQL
+          .works-section__project-technology Redis
+          .works-section__project-technology RabbitMQ
+        .works-section__project-footer
+          .works-section__project-industry Goverment
+          .works-section__project-location Russia
+
+    /= link_to electronic_workflow_url, class: "works-section__project"
+      .works-section__overlay
+      .works-section__project-bg style="background-image: url(#{image_path('airport-staff.jpg')})"
+      .works-section__project-info
+        .works-section__project-title Electronic access control system
+
+    /= link_to electronic_system_url, class: "works-section__project"
+      .works-section__overlay
+      .works-section__project-bg style="background-image: url(#{image_path('airport-staff.jpg')})"
+      .works-section__project-info
+        .works-section__project-title Online Education and Attestation System
+
+    /= link_to "", class: "works-section__project"
+      .works-section__overlay
+      .works-section__project-bg style="background-image: url(#{image_path('airport-staff.jpg')})"
+      .works-section__project-info
+        .works-section__project-title GPS Courier Tracking System
+
+    = link_to hvmn_url, class: "works-section__project"
+      .works-section__overlay
+      .works-section__project-bg style="background-image: url(#{image_path('hvmn-preview.png')})"
+      .works-section__project-info
+        .works-section__project-title Innovative e-commerce health platform
+        .works-section__project-services
+          .works-section__project-service Software Product Development
+          .works-section__project-service Support Maintenance
+          .works-section__project-service Software Testing
+        .works-section__project-technologies
+          .works-section__project-technology Ruby
+          .works-section__project-technology Ruby on Rails
+          .works-section__project-technology PostgreSQL
+          .works-section__project-technology React.js
+          .works-section__project-technology Redux
+        .works-section__project-footer
+          .works-section__project-industry E-commerce
+          .works-section__project-location San Francisco, USA

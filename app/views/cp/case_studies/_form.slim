@@ -1,0 +1,79 @@
+script[type="text/javascript"]
+  |  $('.chosen-select').chosen({ allow_single_deselect: true, no_results_text: 'No results matched', width: '100%' });
+
+= form_for [:cp, @case_study], as: :case_study do |f|
+  - if @case_study.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@case_study.errors.count, "error")} prohibited this meta information from being saved:"
+      ul
+        - @case_study.errors.full_messages.each do |message|
+          li = message
+
+  .cp-form-item
+    = label_tag(:locale, "Project locale:")
+    br
+    = f.select :locale, I18n.available_locales , { include_blank: false }
+
+  .cp-form-item
+    = label_tag("Path name:")  
+    = f.text_field :path_name, placeholder: 'Path name', class: 'input'
+
+  .cp-form-item
+    = label_tag("Project Title:")
+    = f.text_field :project_title, placeholder: 'Project title', class: 'input'
+
+  .cp-form-item
+    = label_tag("Key Technologies:")
+    = f.select :technology_ids, Technology.pluck(:name, :id) , { include_blank: true }, { multiple: true, class: 'chosen-select', data: { placeholder: "Key Technologies" } }
+
+  .cp-form-item
+    = label_tag("Business Domains:")
+    = f.select :business_domain_ids, BusinessDomain.pluck(:name, :id) , { include_blank: true }, { multiple: true, class: 'chosen-select', data: { placeholder: "Business Domains" } }
+
+  .cp-form-item
+    = label_tag(:project_bg, "Project background:")
+    br
+    = f.file_field :project_bg
+
+  .cp-form-item
+    = label_tag("Project Screenshots:")
+    br
+    = f.file_field :screenshots, multiple: true, placeholder: ' Choose multiple amount of pictures'
+
+  .cp-form-item
+    = label_tag("Business Challenge Description:")
+    = f.trix_editor :business_challenge, placeholder: 'Description text', size: "60x4", class: 'textarea'
+    
+  .cp-form-item
+    = label_tag("Developted Solution Description:")
+    = f.trix_editor :developted_solution_description, placeholder: 'Description text', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("Result:")
+    = f.trix_editor :result, placeholder: 'Result text', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("What are we proud of:")
+    = f.trix_editor :proud_of, placeholder: 'Proud of Text', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("Customer:")
+    = f.text_area :customer, placeholder: 'Customer Name', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("Section:")
+    = f.text_area :section, placeholder: 'Project Section', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("Technologies:")
+    = f.text_area :technology, placeholder: 'Project Technologies', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("Duration:")
+    = f.text_area :duration, placeholder: 'Project Duration', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("Team:")
+    = f.text_area :team, placeholder: 'Project Team', size: "60x4", class: 'textarea'
+
+  .actions = f.submit

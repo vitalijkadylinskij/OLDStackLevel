@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: mysecretpassword
+  host: db
+  port: 5432
+  pool: 5
+
+development:
+  <<: *default
+  database: stacklevel_development
+
+test:
+  <<: *default
+  database: stacklevel_test
+
+production:
+  <<: *default
+  database: stacklevel_production
+  username: postgres
+  password: <%= ENV['POSTGRES_PASSWORD'] %>

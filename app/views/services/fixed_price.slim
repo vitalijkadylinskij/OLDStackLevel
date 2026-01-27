@@ -1,0 +1,56 @@
+.b-service.b-service--purple
+  = render 'shared/header', css: 'black', logo: true
+
+  .b-service__title = t('fixed-price.title')
+
+  .b-service__inner
+    .b-service__steps
+      = render 'b_service_step',
+        step: 1,
+        icon: 'brainstorm',
+        title: t('fixed-price.step-1.title'),
+        desc: t('fixed-price.step-1.desc')
+
+      = render 'b_service_step',
+        step: 2,
+        icon: 'blogging',
+        title: t('fixed-price.step-2.title'),
+        desc: t('fixed-price.step-2.desc')
+
+      = render 'b_service_step',
+        step: 3,
+        icon: 'cloud-computing',
+        title: t('fixed-price.step-3.title'),
+        desc: t('fixed-price.step-3.desc')
+
+      = render 'b_service_step',
+        step: 4,
+        icon: 'piggy-bank',
+        title: t('fixed-price.step-4.title'),
+        desc: nil
+
+      = render 'b_service_step',
+        step: 5,
+        icon: 'development',
+        title: t('fixed-price.step-5.title'),
+        desc: t('fixed-price.step-5.desc')
+
+      = render 'b_service_step',
+        step: 6,
+        icon: 'rocket',
+        title: t('fixed-price.step-6.title'),
+        desc: t('fixed-price.step-6.desc')
+
+      = render 'b_service_step',
+        step: 7,
+        icon: 'receipt',
+        title: t('fixed-price.step-7.title'),
+        desc: nil
+
+      = render 'b_service_step',
+        step: 8,
+        icon: 'support',
+        title: t('fixed-price.step-8.title'),
+        desc: t('fixed-price.step-8.desc')
+
+= render 'shared/contact_us', color: '#3f51b5'

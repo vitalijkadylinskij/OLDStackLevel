@@ -1,0 +1,113 @@
+// Colors
+$color-line: #e7ebef;
+$color-orange: #ef5b35;
+$color-semi-black: #333;
+$border-bottom: 4px solid #2215f9;
+// Fonts and weights
+$font-main: "formular", sans-serif;
+
+$fw-normal: 400;
+$fw-regular: 500;
+$fw-bold: 600;
+$fw-black: 700;
+$line-height: 1.4;
+
+// Dimensions
+// 1200px - 100%
+// 12px - 1% - 1vw
+
+// Sizes
+$header-height: 100px;
+
+@function calc-size($size-in-px) {
+  @return $size-in-px / 12 * 1vw;
+}
+
+$breakpoints: (
+  "xs": (
+    min-width: 375px
+  ),
+  "s": (
+    min-width: 517px
+  ),
+  "small": (
+    min-width: 767px
+  ),
+  "medium": (
+    min-width: 992px
+  ),
+  "large": (
+    min-width: 1200px
+  ),
+  "full": (
+    min-width: 1476px
+  ),
+  "extra": (
+    min-width: 1600px
+  ),
+  "full-hd": (
+    min-width: 1920px
+  )
+);
+
+@mixin step-border($border-width) {
+  .b-service--purple & {
+    border-left: #{$border-width}px solid #3f51b5;
+  }
+
+  .b-service--green & {
+    border-left: #{$border-width}px solid #009688;
+  }
+
+  .b-service--orange & {
+    border-left: #{$border-width}px solid #ff5722;
+  }
+}
+
+@mixin media($queries) {
+  @media #{inspect($queries)} {
+    @content;
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  $queries: map-get($breakpoints, $breakpoint);
+
+  @include media($queries) {
+    @content;
+  }
+}
+
+// Responsive text size
+
+$min_width: 300px;
+$max_width: 1600px;
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type1($min-font-size, $max-font-size) {
+  $u1: unit($min_width);
+  $u2: unit($max_width);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      // line-height: $min-line-height;
+      @media screen and (min-width: $min_width) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min_width}) / #{strip-unit($max_width - $min_width)})
+        );
+        // line-height: calc(#{$min-line-height} + #{strip-unit($max-line-height - $min-line-height)} * ((100vw - #{$min_width}) / #{strip-unit($max_width - $min_width)}));
+      }
+      @media screen and (min-width: $max_width) {
+        font-size: $max-font-size;
+        // line-height: $max-line-height;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: stacklevel_development
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://postgres:mysecretpassword@db:5432/stacklevel_development
+    ports:
+      - "3000:3000"
+    command: bash -c "rm -f tmp/pids/server.pid && rails server -b 0.0.0.0"
+volumes:
+  db_data:

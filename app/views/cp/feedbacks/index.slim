@@ -1,0 +1,25 @@
+.cp__header
+  h2 Feedbacks
+  .cp_header_link
+    = link_to 'RU', cp_feedbacks_path(locale: "ru"), class: 'locale_link'
+    |&nbsp;
+    = link_to 'EN', cp_feedbacks_path(locale: 'en'), class: 'locale_link'
+    |&nbsp;
+    = link_to 'All', cp_feedbacks_path(locale: nil), class: 'locale_link'
+    |&nbsp;
+    = link_to 'NEW FEEDBACK', new_cp_feedback_path, class: 'locale_link'
+
+.c.cp__content
+  - @feedbacks.each do |feedback|
+    = link_to feedback.author_name, edit_cp_feedback_path(feedback)
+    br
+    label Feedback: 
+    b = feedback.feedback_text
+    br
+    label Job Title: 
+    b = feedback.job_title
+    br
+    b = link_to 'EDIT', edit_cp_feedback_path(feedback)
+    |&nbsp;
+    b = link_to 'DELETE', cp_feedback_path(feedback), method: :delete, data: { confirm: 'Are you sure?' }
+    hr

@@ -1,0 +1,37 @@
+.modal
+    .modal-content
+        .modal-header
+            h1 Hire Us
+            div.close-button = inline_svg('iconfinder_button_close_352915.svg')
+        .contact-us__content
+            form.contact-us__form method="POST" action="https://formspree.io/mqkpznzr"
+                / input type="hidden" value="#{form_authenticity_token()}" name="authenticity_token"
+
+                .contact-us__input
+                    input.contact-us__control name="name" required="true" type="text" id="name"
+                    span.contact-us__input-highlight
+                    span.contact-us__input-bar
+                    label.contact-us__label for="name" = t('contact-us.name')
+
+                .contact-us__input
+                    input.contact-us__control name="email" required="true" type="email" id="email"
+                    span.contact-us__input-highlight
+                    span.contact-us__input-bar
+                    label.contact-us__label for="email" = t('contact-us.email')
+
+                .contact-us__input
+                    input.contact-us__control name="description" required="true" type="text" id="description"
+                    span.contact-us__input-highlight
+                    span.contact-us__input-bar
+                    label.contact-us__label for="description" = t('contact-us.description')
+                
+                .contact-us__input.upload-file
+                    input.contact-us__control name="uploaded_cv" required="true" type="file" id="uploaded_cv"
+                    / span.contact-us__input-highlight
+                    / span.contact-us__input-bar
+                    / label.contact-us__label for="description" = t('contact-us.description')
+
+                button.contact-us__button style="color: ;" type="submit" = t('contact-us.submit')
+
+    .pop-up
+        span = raw t("contact-us.pop-up")

@@ -1,0 +1,25 @@
+h1 Listing requests
+
+table
+  thead
+    tr
+      th Name
+      th Email
+      th Position
+      th Budget
+      th Description
+      th
+
+  tbody
+    - @order_requests.each do |request|
+      tr
+        td = request.name
+        td = request.email
+        td = request.position
+        td = request.budget
+        td = request.description
+        td = link_to 'Show', cp_order_request_path(request)
+
+br
+
+= link_to 'Dashboard', cp_dashboard_path

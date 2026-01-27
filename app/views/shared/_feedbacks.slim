@@ -1,0 +1,23 @@
+ruby:
+  feedbacks = Feedback.locale(I18n.locale)
+
+- if feedbacks.length != 0
+  .testimonials
+      h3.testimonials__header.shared__sections-subtitles = raw t('home.testimonials-header')
+      .testimonials__block
+        .feedback-slider.owl-carousel
+          - feedbacks.each do |feedback|
+            .feedback-slider__item
+              .feedback__content
+                  img.feedback__photo src = image(feedback.author_photo) style = (feedback.author_photo.blank? && 'display: none')
+                  .feedback__text
+                    h4.feedback__text_author class = (feedback.author_photo.blank? && 'feedback__text_author--no-image')
+                      = feedback.author_name
+                    p.feedback__text_comment = feedback.feedback_text
+                    p.feedback__text_job = feedback.job_title
+                  img.feedback__quotes src=image_path("_quotes.svg")
+        .feedback-slider__nav
+          .feedback-slider-nav__prev
+          .feedback-slider-nav__next
+          .feedback-slider__counter
+

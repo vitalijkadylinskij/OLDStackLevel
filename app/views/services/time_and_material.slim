@@ -1,0 +1,44 @@
+.b-service.b-service--green
+  = render 'shared/header', css: 'black', logo: true
+
+  .b-service__title = t('time-and-material.title')
+
+  .b-service__inner
+    .b-service__steps
+      = render 'b_service_step',
+        step: 1,
+        icon: 'brainstorm',
+        title: t('time-and-material.step-1.title'),
+        desc: t('time-and-material.step-1.desc')
+
+      = render 'b_service_step',
+        step: 2,
+        icon: 'target',
+        title: t('time-and-material.step-2.title'),
+        desc: t('time-and-material.step-2.desc')
+
+      = render 'b_service_step',
+        step: 3,
+        icon: 'management',
+        title: t('time-and-material.step-3.title'),
+        desc: t('time-and-material.step-3.desc')
+
+      = render 'b_service_step',
+        step: 4,
+        icon: 'time',
+        title: t('time-and-material.step-4.title'),
+        desc: t('time-and-material.step-4.desc')
+
+      = render 'b_service_step',
+        step: 5,
+        icon: 'rocket',
+        title: t('time-and-material.step-5.title'),
+        desc: t('time-and-material.step-5.desc')
+
+      = render 'b_service_step',
+        step: 6,
+        icon: 'support',
+        title: t('time-and-material.step-6.title'),
+        desc: t('time-and-material.step-6.desc')
+
+= render 'shared/contact_us', color: '#009688'

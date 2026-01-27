@@ -1,0 +1,248 @@
+@import "../variables";
+
+.header {
+  position: relative;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: white;
+  top: 0;
+  z-index: 10;
+
+  @include fluid-type1(16px, 20px);
+  @include respond-to("large") {
+    height: 150px;
+  }
+}
+
+.header__menu-block {
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__dots {
+    left: 35px;
+    right: 35px;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    background-size: 35px 35px;
+    background-repeat: repeat;
+    background-image: -webkit-linear-gradient(
+        315deg,
+        #c4c2cc 3px,
+        transparent 5px
+      ),
+      -webkit-linear-gradient(135deg, #c4c2cc 3px, transparent 5px);
+    background-image: linear-gradient(135deg, #c4c2cc 4px, transparent 4px),
+      linear-gradient(315deg, #c4c2cc 4px, transparent 4px);
+    background-position: 8px 11px, 48.5px 51.5px;
+
+    @include respond-to("medium") {
+      display: none;
+    }
+  }
+
+  .header-logo {
+    margin-right: 3vw;
+    @include respond-to("extra") {
+      margin-right: 6vw;
+    }
+    @include respond-to("full-hd") {
+      margin-right: 130px;
+    }
+    svg {
+      width: 12vw;
+      max-width: 254px;
+      display: none;
+
+      @include respond-to("extra") {
+        display: block;
+      }
+      @include respond-to("full") {
+        width: auto;
+      }
+    }
+
+    img {
+      @include respond-to("extra") {
+        display: none;
+      }
+    }
+  }
+}
+
+.header__link {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+
+  margin-right: 2vw;
+  @include respond-to("full-hd") {
+    margin-right: 30px;
+  }
+
+  position: relative;
+
+  &:hover {
+    box-sizing: border-box;
+    box-shadow: 0 4px 0 0 #2215f9;
+    color: #2215f9;
+  }
+}
+
+.header__link_lang {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+
+  position: relative;
+
+  &:hover {
+    box-sizing: border-box;
+    box-shadow: 0 4px 0 0 #2215f9;
+    color: #2215f9;
+  }
+}
+
+.header__link_lang:last-child {
+  margin-left: 5px;
+}
+
+.lang_active {
+  color: #2215f9;
+}
+
+.header__menu-items {
+  width: 100%;
+  display: none;
+  position: relative;
+
+  @include respond-to("large") {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include respond-to("extra") {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .menu-items__child {
+    display: inline-flex;
+    justify-content: flex-start;
+    margin-right: 5vw;
+    flex: 2;
+
+    @include respond-to("full") {
+      margin-right: unset;
+    }
+  }
+  .menu-items__child:last-child {
+    justify-content: flex-end;
+    margin-right: unset;
+    flex: 1;
+
+    @include respond-to("full-hd") {
+      margin-right: unset;
+    }
+  }
+}
+
+.header__menu-burger {
+  cursor: pointer;
+  @include respond-to("large") {
+    display: none;
+  }
+}
+
+.header__modal-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+
+  display: none;
+  z-index: 200;
+}
+
+.header__modal-block.active {
+  display: block;
+}
+
+.modal-block__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+
+  .lang a {
+    margin: 0 15px;
+  }
+}
+
+.modal-block__menu-items {
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 100px;
+}
+
+.modal-block__close-button {
+  cursor: pointer;
+}
+
+.header__link__modal {
+  margin: 15px 0;
+}
+
+.menu-items__vector {
+  position: absolute;
+  top: 175px;
+}
+
+.child__dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.child__dropdown > div > a {
+  box-shadow: unset !important;
+}
+
+.child__dropdown-content {
+  width: auto;
+  display: none;
+  position: absolute;
+  left: -10px;
+  background-color: #fff;
+  padding: 10px 10px 0 10px;
+  z-index: 1;
+  box-shadow: 1px;
+}
+
+.child__dropdown:hover .child__dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown__link {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-right: auto !important;
+
+  &:hover {
+    box-sizing: border-box !important;
+    box-shadow: 0 4px 0 0 #2215f9 !important;
+    color: #2215f9 !important;
+  }
+}

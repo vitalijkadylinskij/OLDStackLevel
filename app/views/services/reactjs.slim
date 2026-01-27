@@ -1,0 +1,55 @@
+.service
+  = render 'shared/header', css: 'default', logo: true
+
+  .page__header.page__header--react
+    .service__title React.js<br/>#{t('home.development')}
+    .service__subtitle = t('react.subtitle')
+
+  .service__section
+    .service__section-title = t('react.first-section-title')
+
+    p.service__section-text = t('react.first-section-text')
+
+    .service__blocks
+      .service__block
+        .service__block-image
+          = image_tag('react.png')
+        .service__block-body = t('react.first-block-body')
+
+      .service__block
+        .service__block-image
+          = image_tag('redux.png')
+        .service__block-body = t('react.second-block-body')
+
+      .service__block
+        .service__block-image
+          = image_tag('react-native.png')
+        .service__block-body = t('react.third-block-body')
+
+  .service__section.service__section--dark-blue
+    .service__section-title = t('react.second-section-title')
+    ul.service__section-list
+      li.service__section-list-item = t('react.list.item-1')
+      li.service__section-list-item = t('react.list.item-2')
+      li.service__section-list-item = t('react.list.item-3')
+
+  .service__section
+    .service__section-title = t('react.third-section-title')
+    .service__companies
+      .service__company
+        a href="http://jamm.travel"
+          = image_tag('companies/jammtravel.png', class: 'service__company-logo')
+
+      .service__company
+        a href="http://planiversity.com"
+          = image_tag('companies/planiversity.png', class: 'service__company-logo')
+
+      .service__company
+        a href="http://td-berlin.com"
+          = image_tag('companies/tdberlin.png', class: 'service__company-logo')
+
+      .service__company
+        a href="http://roox.ru/"
+          = image_tag('companies/roox.png', class: 'service__company-logo')
+
+  = render 'shared/contact_us', color: '#2D8EBB'

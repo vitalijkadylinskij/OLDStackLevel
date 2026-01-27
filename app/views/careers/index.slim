@@ -1,0 +1,33 @@
+= render 'shared/header'
+
+.shared-background-vectors__wrapper
+  .careers-vector-1
+    = inline_svg("careers/v-vector-blue.svg")
+
+.team-section
+  .shared__section-title
+    .shared__width-wrapper
+      .shared__section-title__content--hasButton
+        .shared__section-title__content--hasButton__submain
+          .submain-tagline = raw t('case-studies.subtitle') 
+          .submain-button.white.trigger = raw t('careers.hire-us')
+          .shared__section-title__content__vector.case-default
+            = inline_svg("title-dots.svg")
+
+.team-section__collapse
+  .collapse--bg-dots
+  .shared__width-wrapper
+    h2 = t('careers.title-1')
+    - @developers.each do |developer|  
+      .collapsible-item
+        .collapse-item__header 
+          div = developer.title
+          = inline_svg("careers/arrow-collapse.svg")
+        .collapse-item__content
+          .collapse-item__content-title
+            .content-title__description = developer.description.html_safe
+            .content-title__button
+              .blue.trigger = raw t('careers.send-cv') 
+            
+    h2 = t('careers.title-2')
+= render 'shared/footer'

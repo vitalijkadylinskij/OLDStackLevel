@@ -1,0 +1,310 @@
+de:
+  # career page
+  step: "Schritt"
+  career:
+    title: "Trete unserem Team bei"
+    text: "Wenn Sie mit STACKLEVEL arbeiten möchten und Superkräfte im
+           Backend oder Frontend haben, bitte mailen Sie uns mit der
+           Taste unten."
+    link: "Lass uns etwas Großartiges machen"
+# works page
+  works:
+    title: "Fallstudien"
+    text: |
+      Here you can find our best solutions in web and mobile development that we want to share with you.
+  # services page
+  services:
+    title: "Wir bauen die kühnsten Produkte und machen sie zum Erfolg."
+    development-section-title: "Entwicklung"
+    development-section-subtitle: Viele Entwicklungspraktiken, die wir folgten,
+                                  wurden zum ersten Mal beschrieben in
+                                  "Extreme Programming Explained" und
+                                  vor mehr als 25 Jahren veröffentlicht.
+    what-we-do-section-title: "Was wir machen"
+    what-we-do-section-subtitle: "Als eine Software-Entwicklungsagentur
+      bieten wir Vollzyklus-Dienste für Web-und
+      Mobile Entwicklung. Die Festlegung unserer Entwicklungsmethoden liegt auf
+      der Grundlage Ihrer Budget-und Projektanforderungen."
+    #not full
+
+    consulting-and-estimation-title: "Beratung & Projektschätzung KOSTENLOS"
+    consulting-and-estimation-text: "Wir freuen uns über Ihr Projekt, planen im Detail und geben Ihnen innerhalb von 48 Stunden eine Schätzung."
+
+    code-review-title: "Code Review & Security Audit"
+    code-review-text: "Wir sind bereit, Ihren Anwendungscode zu überprüfen und eine Strategie zur Verbesserung von Sicherheit, Geschwindigkeit und Skalierbarkeit zu bieten."
+
+    application-support-title: "Application Support & Bug Repair"
+    application-support-monitoring: "Wir kümmern uns um die Überwachung von Servern & application health"
+    application-support-application: "Um Ihre bestehende Anwendung zu unterstützen, werden wir die Fehler beheben und die Anwendungsleistung optimieren"
+    application-support-reports: "Schlussfolgerungen über gefundene Themen und Arbeiten"
+    application-support-questions: "Wir sind offen für alle Fragen, die Sie per Telefon, E-Mail oder Skype haben können"
+
+    web-and-mobile-development-title: "Web- und App Entwicklung"
+    web-and-mobile-development-tech: "Wir entwerfen Web- und Mobile Anwendungen mit den aktuellsten Techniken, Methoden und Fähigkeiten"
+    web-and-mobile-development-transparency: "Wir verstehen die Notwendigkeit von Transparenz, und so bleibt der Entwicklungsprozess für unsere Kunden während der gesamten Projektdauer sichtbar"
+    web-and-mobile-development-review: "Jede Codezeile, die wir schreiben, unterzieht sich einer Codeüberprüfung"
+    web-and-mobile-development-tests: "Unser Code wird durch gründliche Unit-Tests abgedeckt"
+    web-and-mobile-development-tools: "Wir verwenden automatische Werkzeuge und Methoden, um die Codequalität zu überprüfen"
+
+    ruby/rails-section-text: "Teams, die Ruby on Rails nutzen, können sichere, stabile Produkte
+      schnell mit einem niedrigeren Gesamtbetriebskosten vermarkten als andere Tools. Framework ist
+      \"batteries included\". Die umliegende Gemeinschaft ist seit über 10 Jahren aktiv und begeistert."
+    see-why-we-love-rails: "Warum wir Rails lieben"
+    node-section-text: "Node.js leuchtet in Echtzeit-Webanwendungen mit Push-Technologie über Websockets. Was ist so revolutionär?
+      Nun, nach über 20 Jahren stateless-web basiert auf dem staatenlosen Request-Response-Paradigma, haben wir endlich
+      Web-Anwendungen mit Echtzeit-Zweiwege-Verbindungen, bei denen sowohl der Client als auch der Server Kommunikation
+      initiieren können, so dass sie Daten frei austauschen können."
+    see-our-nodejs-work: "Unsere Node.js Arbeit"
+    other: "Andere Sprachen und Frameworks:"
+    other-text: "Zusätzlich zu Ruby on Rails und Node.js verwenden wir andere Programmiersprachen und Frameworks."
+    second-section-title: "Kooperationsmodelle"
+    second-section-subtitle: "Wir sind der festen Überzeugung, dass eine erfolgreiche Outsourcing-Erfahrung ein
+      Ergebnis einer gründlichen Planung und soliden Strategieentwicklung in Bezug auf Projektdurchführungs-
+      und Managementtechniken ist."
+    fixed-price: "Festpreis"
+    time-and-material: "Zeit & Material"
+    dedicated-team: "Engagiertes Team"
+  # header partial
+  header:
+    case-studies: "Fallstudien"
+    services: "Dienstleistungen"
+    career: "Karriere"
+  # contact us partial
+  contact-us:
+    title: "Stellen Sie uns ein"
+    name: "Name"
+    email: "Email"
+    budget: "Ihr Budget"
+    description: "Wie können wir Ihnen helfen?"
+    submit: "Anfrage senden"
+    address:
+      email: "Schreiben Sie eine Email:"
+      phone: "oder rufen Sie uns an:"
+      office: "30/403, St. Gamarnika, <br> 220131, Belarus/Minsk"
+    address-2:
+      phone: "or call us:"
+      office: "204 W. 14th Street, <br> Wilmington, DE 19801, USA"
+
+  # order modal partial
+  order-modal:
+    title: "Thank you!"
+    text: "Your message sent. Shortly our manager will contact you."
+    name: "Alex Pukhalski"
+    caption: "your personal manager"
+  # home page
+  home:
+    main: Custom Web <br/> Development <br/> Company
+    submain: Turning Your Great Ideas into <br/> <span class="page__typing">Successful</span> Web Solutions
+    title: Experience and skills you need
+    first-section-text-1: STACKLEVEL provides custom web development services adjusted exactly to your unique business needs. Our office is staffed by some of the most talented and innovative professionals, who specialize in web and mobile development as well as the variety of other technological and software related fields. Our services are focused only on increasing your company’s profits.
+    first-section-text-2: "We have successfully delivered solutions to <span style='font-weight: 600;'>over 30 companies</span> across varying business models and we are always striving for our expertise expand. Our experience is drawn from projects throughout the United States, United Kingdom, Russia and Europe."
+
+    services-title: "Unsere dienstleistungen"                            
+
+    consulting-and-estimation-title: "Beratung & Projektschätzung KOSTENLOS"
+    consulting-and-estimation-text: "Gerne besprechen wir Ihr Projekt und Ihre Pläne ausführlich und erstellen Ihnen innerhalb von 48 Stunden einen Kostenvoranschlag."
+
+    code-review-title: "Code Review & Security Audit"
+    code-review-text: "Wir sind bereit, Ihren Anwendungscode zu überprüfen und eine Strategie zur Verbesserung von Sicherheit, Geschwindigkeit und Skalierbarkeit bereitzustellen."
+    
+    application-support-title: "Application Support & Bug Repair"
+    application-support-text: "Wir kümmern uns um die Überwachung des Server- und Anwendungszustands. Indem wir Ihre Anwendung unterstützen, reparieren wir die Fehler und optimieren die Leistung. Sie erhalten Abschlussberichte zu den festgestellten Problemen und den durchgeführten Arbeiten."
+
+    web-and-mobile-development-title: "Web- und App Entwicklung"
+    web-and-mobile-development-text: "Wir erstellen Anwendungen mit den neuesten Technologien. Der Entwicklungsprozess bleibt für unsere Kunden während des gesamten Entwicklungszeitraums transparent. Jede Codezeile wird sorgfältig geprüft und durch Unit-Tests abgedeckt."
+        
+    portfolio-title: "Unser portfolio"
+
+    service-title: "Unsere kunden" 
+
+    web-development: "Webentwicklung"
+    back-end: "Backend"
+    development : "Entwicklung"
+    and: "und"
+    rails-text: "sind im Herzen der meisten Projekte und das wesentliche Werkzeug der Wahl."
+    advanced-text: "Um die leistungsstärksten Projekte zu stärken, um hohen Belastungen standzuhalten,
+      Netzwerkanwendungen aufzubauen oder große Datenmengen zu verarbeiten, fügen wir"
+    to-the-mix: "die Mischung hinzu."
+    advanced-text-p2: "ist unsere Wahl für den Aufbau von Echtzeitanwendungen. Mit der Stärke von
+    JavaScript, haben wir die Möglichkeit, isomorphe"
+    and-desktop: "und Desktop"
+    applications: "Anwendungen zu bauen."
+    front-end: "Frontend"
+    with: "mit"
+    redux-text: "ist unsere oberste Wahl für den Aufbau der besten clientseitigen
+      Erfahrung auf einer Single-Page Anwendung."
+    node-text: "die neueste Version von JavaScript, sind die Grundlage für die Frontend-Entwicklung.
+      Frontend wird gebaut mit"
+    all-services: "Unsere Dienstleistungen"
+    title-2: "Kunden und Partner"
+  # react.js page
+  react:
+    subtitle: "React und Redux ist unsere oberste Wahl für den Aufbau der besten
+      clientseitigen Erfahrung auf einer einseitigen Anwendung."
+    first-section-title: "Warum verwenden wir React"
+    first-section-text: "Das Besondere an React ist, dass es allmählich umgesetzt werden kann (wenn man will).
+      Einige JS-Frameworks verlangen, dass Sie eine große Investition in ihre Infrastruktur machen, um anfangen,
+      irgendwelche nutzbaren Ergebnisse zu erzielen, aber React ermöglicht es Ihnen, den Austausch von Komponenten
+      Ihrer Web-App Stück für Stück zu starten. Es ist sehr effektiv für Teams, weil es die Wiederverwendung von
+      UI-Mustern fördert und eine lesbare Syntax erfordert."
+    first-block-body: "Wir haben Single-Page-Anwendungen erstellt, basierend auf Ideen mit Backbone.js Angular,
+      Ember, Ulme und andere. Wir bevorzugen React und Redux zu verwenden, wenn wir eine vollständige
+      Client-Anwendung, anstatt eine Website mit reichen Interaktionen erstellen."
+    second-block-body: "Redux ist eine Flux Bibliothek, die wir verwenden, um den Zustand bei der Verwendung
+      von React zu pflegen. Mit Redux definieren Sie Aktionen, mit denen Sie Ihren Status ändern können.
+      Dies verhindert, dass Programmfehler, die bei der Verwendung von reinen ReactJS üblich waren."
+    third-block-body: "React Native gibt unserem Team die Chance, schnelle, native Anwendungen auf Android und
+      iOS in einer einzigen Codebasis zu schreiben. Das bedeutet, dass wir schneller auf beide Plattformen
+      schreiben können. Wir haben vor kurzem eine Native App für Vinous Media gebaut."
+    second-section-title: "Warum wir react.js wählen:"
+    list:
+      item-1: "UI-Code ist lesbar und wartbar"
+      item-2: "Komponente UI ist die Zukunft der Webentwicklung"
+      item-3: "Leicht zu testen"
+    third-section-title: "Wir haben React.js bei der Arbeit mit großen Firmen verwendet"
+  # ruby on rails page
+  rails:
+    subtitle: "Die Erfahrung sagt uns, dass wir mit Ruby on Rails schnell Ihre Produkte auf den Markt bringen können.
+      Unter Beibehaltung eines hohen Standards der Code-Qualität."
+    first-section-title: "Warum wir Rails lieben"
+    first-block-title: "Batteries included"
+    first-block-body: "Rails war das erste nicht-unternehmende, sture und komplette Web-Framework.
+      Es hatte eine eingebaute Pluralisierung von Substantiven! Es gibt Datenbank-Migrationen,
+      unterschiedliche Laufzeitumgebungen und viele weitere faszinierende Werkzeuge!
+      Eine riesige Tasche von hilfreichen Methoden, die gemeinsame Aufgaben abstrahieren und
+      Code helfen, klar zu lesen. Es dauert nur wenige Minuten, um einen Server zu drehen und nach
+      Heroku zu implementieren, gratis!"
+    second-block-title: "Aktive Entwicklung"
+    second-block-body: "Wir verwenden Rails, weil es sein spezifisches Problem effizienter löst,
+      dank der Jahre der Entwicklung über andere Systeme. Django ist der engste Konkurrent, aber
+      historisch fehlte die Menschenkraft, die das Rails-Ökosystem hatte. Für sichere, stabile und
+      einfache CRUD: Rails. Für die meisten der Web: Rails."
+    third-block-title: "Eine wunderbare Gemeinschaft"
+    third-block-body: "Sobald wir in Rails hereingekommen sind, wurde klar, dass es eine tolle
+      Open-Source-Community um Ruby und Rails gab, die neue oder sogar beängstigende Dinge viel
+      einfacher machte."
+    fourth-block-title: "Wenn Rails keine gute Wahl ist"
+    fourth-block-body: "Go oder Elixir/Phoenix machen mehr Sinn für das Nicht-Web-Internet:
+      Chat, Email, SSH, Redis sockets, Kommandozeilen-API-Tools, benutzerdefinierte
+      Netzwerkserver, alles Synchrone. Alles, was vertikal skaliert oder eine erhebliche
+      Menge an Verkehr (> 10kRPM) hat, sollte wohl nicht in Rails gemacht werden."
+    second-section-title: "Warum Ruby on Rails Entwicklungsservice wählen:"
+    list:
+      item-1: "Lesbarer und meist selbstdokumentierender Code"
+      item-2: "Riesige Sammlung von fertigen Open-Source-Lösungen"
+      item-3: "Schnelle Entwicklung mit weniger Code Schreibung"
+      item-4: "Gute Testumgebung und Fokus auf automatisierte Tests"
+    third-section-title: "Wir haben Ruby on Rails bei der Arbeit mit großen Firmen verwendet"
+  # nodejs page
+  nodejs:
+    subtitle: "Die Wahl einer Programmierplattform hängt von mehreren Aspekten ab, einschließlich
+      Geschwindigkeit, Lernkurve, Skalierbarkeit, leichte Codierung, Community und professionelle
+      Unterstützung und mehrere andere Faktoren. In all diesen Parametern Node.js kommen als
+      Champion unter den Server-Side-Sprachen und kein Wunder, dass Startups zeigen überzeugende
+      Vorliebe für sie."
+    first-section:
+      title: "Warum verwenden wir Node.js bei STACKLEVEL?"
+      text: "Node.js ist eine open source cross-platform Laufzeitumgebung, die in JavaScript
+        geschrieben wurde; die beliebteste Programmiersprache der Welt. Die größten Stärken sind
+        Vielseitigkeit, blitzschnelle Geschwindigkeit der Verarbeitung und hohe Skalierbarkeit."
+      block:
+        first-title: "Hohe Leistung"
+        first-body: "Node.js verwendet die von Google entwickelte V8 JavaScript Motor.
+          Ein extrem schneller Motor! Wenn Ihre Anwendung viel Lesen und Aufzeichnen im
+          Internet oder im Dateisystem macht, Node.js ist die am besten geeignete Technologie, die
+          verwendet werden können, um Ihre App zu erstellen"
+        second-title: "Hoch skalierbar"
+        second-body: "Node.js arbeitet auf einem Prinzip namens event loop, die im Gegensatz
+          zu anderen traditionellen Web-Applikations-Frameworks ist; etwas, das alles für
+          skalierbare real-time Apps macht. Skalierung ist nicht etwas, dass Sie sich Sorgen
+          machen werden, wenn Sie sich entscheiden, Node.js zu verwenden"
+        third-title: "Echtzeit"
+        third-body: "Node.js zeichnet sich durch WebSockets in Echtzeit aus. WebSockets sind
+          offene 2-Wege-Kommunikationskanäle zwischen dem Client und dem Server. Und das macht
+          es wirklich einfach, Echtzeit-Anwendungen wie Spiele, Chat Engines, etc zu bauen"
+    second-section:
+      title: "Warum Node.js Entwicklungsservice wählen:"
+      list:
+        item-1: "Niedrige API"
+        item-2: "Non-blocking und ein ereignisgesteuertes I/O-Modell"
+        item-3: "Schnelle und skalierbare Netzwerkanwendungen"
+        item-4: "Einfache Aktualisierung, gemeinsame Nutzung und Wiederverwendung von Code"
+        item-5: "Ideal für Echtzeit-Webanwendungen"
+    third-section:
+      title: "Was wir in Node.js Stapel verwenden?"
+      block:
+        first-body: "Sails.js ist das populärste MVC-Framework für Node.js, das entworfen
+          ist, um das vertraute MVC-Muster von Frameworks wie Ruby on Rails zu emulieren,
+          aber mit Unterstützung für die Anforderungen moderner Apps: datengesteuerte APIs
+          mit einer skalierbaren, serviceorientierten Architektur."
+        second-body: "Koa.js ist ein neues Web-Framework, das von dem Team hinter Express
+          entworfen wurde, das eine kleinere, ausdrucksvollere und robustere Basis für
+          Webanwendungen und APIs sein soll. Durch die Nutzung von Generatoren Koa können
+          Sie Rückrufe abnehmen und die Fehlerbehandlung erheblich erhöhen."
+        third-body: "Meteor ist eine Full-Stack JavaScript-Plattform für die Entwicklung
+          von modernen Web- und mobilen Anwendungen. Meteor enthält eine Reihe von
+          Technologien für den Aufbau von verbundenen Client-reaktiven Anwendungen,
+          ein Build-Tool und eine kuratierte Reihe von Paketen aus der Node.js und
+          allgemeine JavaScript-Community.
+"
+  # dedicated team page
+  dedicated-team:
+    title: "Engagiertes Team"
+    step-1:
+      title: "Aufklärung Ihren Ideen"
+      desc: "Wir kommunizieren mit Ihnen und markieren alle Geschäftsanforderungen Ihres Projektes."
+    step-2:
+      title: "Konformitätsbewertung"
+      desc: "Wir bieten Ihnen das Team von Entwicklern nach Ihren Bedürfnissen an."
+    step-3:
+      title: "Interview mit den Entwicklern"
+      desc: "Wir schicken Ihnen Lebenslauf der Entwickler und die Interviewphase beginnt. Die Spezialisten werden nach Ihren Wünschen eingestellt."
+    step-4:
+      title: "Monatliche Zahlung"
+      desc: "Wir berichten über Arbeitsstunden, führen eine Retrospektive für den Monat und senden die Rechnung."
+  # fixed price page
+  fixed-price:
+    title: "Festpreis"
+    step-1:
+      title: "Aufklärung Ihren Ideen"
+      desc: "Wir kommunizieren mit Ihnen und markieren alle Geschäftsanforderungen Ihres Projektes."
+    step-2:
+      title: "Technische Spezifikation"
+      desc: "Unser Business Analyst schreibt eine Spezifikation, die alle Features und Workflow beschreibt. Danach schreibt der technische Spezialist die Schätzungen."
+    step-3:
+      title: "Anpassung der Funktionen"
+      desc: "Wir passen das Feature in Bezug auf das Budget und Frist an."
+    step-4:
+      title: "Vorauszahlung"
+    step-5:
+      title: "Entwicklungsphase"
+      desc: "Wir entwickeln Ihr Produkt und senden wöchentliche Berichte mit Analytics."
+    step-6:
+      title: "Projekteröffnung"
+      desc: "Wir arbeiten mit Ihnen vor der Projekteröffnung oder solange Sie uns brauchen."
+    step-7:
+      title: "Zahlung"
+    step-8:
+      title: "Application support"
+      desc: "Wir werden Änderungen vornehmen, die auf der Rückmeldung des Nutzers basieren."
+  # time and material page
+  time-and-material:
+    title: "Zeit & Material"
+    step-1:
+      title: "Aufklärung Ihren Ideen"
+      desc: "Wir kommunizieren mit Ihnen und markieren alle Geschäftsanforderungen Ihres Projektes."
+    step-2:
+      title: "Konformitätsbewertung"
+      desc: "Wir bieten Ihnen das Team von Entwicklern nach Ihren Bedürfnissen an."
+    step-3:
+      title: "Interview mit den Entwicklern"
+      desc: "Wir schicken Ihnen Lebenslauf der Entwickler und die Interviewphase beginnt. Die Spezialisten werden nach Ihren Wünschen eingestellt."
+    step-4:
+      title: "Stundensatzzahlung"
+      desc: "Wir berichten über Arbeitsstunden, führen eine Retrospektive für den Monat und senden die Rechnung."
+    step-5:
+      title: "Das Projekt freigeben"
+      desc: "Wir starten die endgültige Version der Anwendung."
+    step-6:
+      title: "Application support"
+      desc: "Wir werden Änderungen vornehmen, die auf der Rückmeldung des Nutzers basieren."

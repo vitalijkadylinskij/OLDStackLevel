@@ -1,0 +1,53 @@
+.service
+  = render 'shared/header', css: 'default', logo: true
+
+  .page__header.page__header--rails
+    .service__title Ruby on Rails<br/>#{t('home.development')}
+    .service__subtitle = t('rails.subtitle')
+
+  .service__section
+    .service__section-title = t('rails.first-section-title')
+    .t-service__blocks
+      .t-service__block.t-service__block--half.t-service__block--left
+        .t-service__block-title = t('rails.first-block-title')
+        .t-service__block-body = t('rails.first-block-body')
+
+
+      .t-service__block.t-service__block--half.t-service__block--right
+        .t-service__block-title = t('rails.second-block-title')
+        .t-service__block-body = t('rails.second-block-body')
+
+
+      .t-service__block.t-service__block--half.t-service__block--left
+        .t-service__block-title = t('rails.third-block-title')
+        .t-service__block-body = t('rails.third-block-body')
+
+
+      .t-service__block.t-service__block--half.t-service__block--right
+        .t-service__block-title = t('rails.fourth-block-title')
+        .t-service__block-body = t('rails.fourth-block-body')
+
+  .service__section.service__section--dark-blue
+    .service__section-title = t('rails.second-section-title')
+    ul.service__section-list
+      li.service__section-list-item = t('rails.list.item-1')
+      li.service__section-list-item = t('rails.list.item-2')
+      li.service__section-list-item = t('rails.list.item-3')
+      li.service__section-list-item = t('rails.list.item-4')
+
+  .service__section
+    .service__section-title = t('rails.third-section-title')
+    .service__clients
+      .service__client
+        img.service__client-logo src=image_path('companies/tdberlin.svg')
+
+      .service__client
+        img.service__client-logo src=image_path('companies/jammtravel.svg')
+
+      .service__client
+        img.service__client-logo src=image_path('companies/hvmn.svg')
+
+      .service__client
+        img.service__client-logo src=image_path('companies/viasports.svg')
+
+  = render 'shared/contact_us', color: '#E82E4D'

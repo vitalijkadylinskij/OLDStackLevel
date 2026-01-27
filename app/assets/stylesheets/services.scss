@@ -1,0 +1,59 @@
+
+.services__section {
+  background-color: #282b36;
+  position: relative;
+  padding: 3vw 28vw;
+  overflow: hidden;
+  color: #fff;
+  }
+
+.services__block {
+  padding-bottom: 8vw;
+  }
+
+.services__block-title {
+  font-size: 1.8vw;
+  margin-bottom: 1.8vw;
+  font-weight: bold;
+  }
+
+.service-title {
+  color: #ed3e44;
+  font-size: 1.4vw;
+  margin: 5vw 0 1.6vw;
+  font-weight: bold;
+  }
+
+.service-body {
+  margin-bottom: 1.8vw;
+  }
+
+.services__block-body, .service-body, .service-link {
+  font-size: 1.2vw;
+  color: #b7bdc5;
+  }
+
+ul.how-we-work {
+  margin: 3vw 0 0 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    padding-left: 1.4vw;
+    margin-top: 1vw;
+    position: relative;
+    }
+
+  li::before {
+    position: absolute;
+    top: 0.7vw;
+    left: 0;
+    height: 6px;
+    width: 6px;
+    background-color: #ed3e44;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    margin-top: -2px;
+    }
+}

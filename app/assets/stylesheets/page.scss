@@ -1,0 +1,105 @@
+@import "./variables";
+
+.page {
+  position: relative;
+  font-family: Formular;
+}
+
+.page__header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: image-url("bg-footer.svg");
+  background-position: 50%;
+
+  &--main {
+    background-color: #282b36;
+    text-align: left;
+  }
+
+  &--rails {
+    background-image: image-url("pattern-rails.svg");
+    background-color: #e82e4d;
+
+    background-size: 315px;
+
+    @include respond-to("small") {
+      background-size: 500px;
+    }
+  }
+
+  &--nodejs {
+    background-image: image-url("pattern-nodejs.svg");
+    background-color: #75b066;
+    background-size: 315px;
+
+    @include respond-to("small") {
+      background-size: 500px;
+    }
+  }
+
+  &--react {
+    background-image: image-url("pattern-react.svg");
+    background-color: #2d8ebb;
+    background-size: 315px;
+
+    @include respond-to("small") {
+      background-size: 500px;
+    }
+  }
+
+  &--background {
+    background-size: cover;
+  }
+}
+
+$title-size: 40;
+$title-padding: 32;
+// .page__title {
+//   padding: #{$title-padding}px #{$title-padding}px #{$title-padding / 3}px #{$title-padding}px;
+//   color: #fff;
+//   font-size: #{$title-size}px;
+//   font-weight: $fw-black;
+//   line-height: 1.1;
+//   z-index: 1;
+
+//   @include respond-to("small") {
+//     font-size: calc-size($title-size * 2);
+//     padding: calc-size($title-padding * 1.5) calc-size($title-padding * 3)
+//       calc-size($title-padding / 2) calc-size($title-padding * 3);
+//   }
+
+//   &--upper {
+//     text-transform: uppercase;
+// //   }
+// // }
+
+// $subtitle-size: 16;
+// // $subtitle-padding-y: 16;
+// // $subtitle-padding-x: 32;
+// .page__subtitle {
+//   padding: #{$subtitle-padding-y}px #{$subtitle-padding-x}px;
+//   font-size: #{$subtitle-size}px;
+//   color: #fff;
+//   z-index: 1;
+
+//   @include respond-to("small") {
+//     font-size: calc-size($subtitle-size * 1.5);
+//     padding: calc-size($subtitle-padding-y * 3)
+//       calc-size($subtitle-padding-x * 5);
+//   }
+// }
+
+.page__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-color: rgba(1, 1, 1, 0.7);
+}

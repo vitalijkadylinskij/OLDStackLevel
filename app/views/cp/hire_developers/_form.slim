@@ -1,0 +1,37 @@
+script[type="text/javascript"]
+  |  $('.chosen-select').chosen({ allow_single_deselect: true, no_results_text: 'No results matched', width: '100%' });
+
+= form_for [:cp, @hire_developer], as: :hire_developer do |f|
+  - if @hire_developer.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@hire_developer.errors.count, "error")} prohibited this meta information from being saved:"
+      ul
+        - @hire_developer.errors.full_messages.each do |message|
+          li = message
+
+  .cp-form-item
+    = label_tag(:locale, "Project locale:")
+    br
+    = f.select :locale, I18n.available_locales , { include_blank: false }
+
+  .cp-form-item
+    = label_tag("Title:")
+    = f.text_field :developer_title, placeholder: 'Developer title', class: 'input'
+
+  .cp-form-item
+    = label_tag("Technologies:")
+    = f.select :technology_ids, Technology.pluck(:name, :id) , { include_blank: true }, { multiple: true, class: 'chosen-select', data: { placeholder: "Project technologies" } }
+  
+  .cp-form-item
+    = label_tag("Frameworks:")
+    = f.select :framework_ids, Framework.pluck(:name, :id) , { include_blank: true }, { multiple: true, class: 'chosen-select', data: { placeholder: "Project Frameworks" } }
+
+  .cp-form-item
+    = label_tag("Business Domains:")
+    = f.select :business_domain_ids, BusinessDomain.pluck(:name, :id) , { include_blank: true }, { multiple: true, class: 'chosen-select', data: { placeholder: "Project Frameworks" } }
+
+  .cp-form-item
+    = label_tag("Experience:")
+    = f.trix_editor :experience_description, placeholder: 'Experience Text', class: 'textarea'
+
+  .actions = f.submit

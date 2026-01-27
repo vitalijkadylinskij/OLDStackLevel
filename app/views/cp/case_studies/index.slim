@@ -1,0 +1,19 @@
+.cp__header
+  h2 Case studies
+  .cp_header_link
+    = link_to 'RU', cp_case_studies_path(locale: "ru"), class: 'locale_link'
+    |&nbsp;
+    = link_to 'EN', cp_case_studies_path(locale: 'en'), class: 'locale_link'
+    |&nbsp;
+    = link_to 'All', cp_case_studies_path(locale: nil), class: 'locale_link'
+    |&nbsp;
+    = link_to 'NEW CASE STUDY', new_cp_case_study_path, class: 'locale_link'
+
+.cp__content
+  - @case_studies.each do |case_study|
+    = link_to case_study.project_title.html_safe, cp_case_study_path(case_study)
+    br
+    b = link_to 'EDIT', edit_cp_case_study_path(case_study)
+    |&nbsp;
+    b = link_to 'DELETE', cp_case_study_path(case_study), method: :delete, data: { confirm: 'Are you sure?' }
+    hr

@@ -1,0 +1,16 @@
+.cp__header
+  h2 Blog authors
+
+  .cp__header-actions
+    = link_to 'New author', new_cp_blog_author_path, class: 'cp-btn'
+
+.cp__content
+  table
+    thead
+      tr
+        th Name
+
+    tbody
+      - @authors.each do |author|
+        tr
+          td = author.name

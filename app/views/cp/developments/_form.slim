@@ -1,0 +1,56 @@
+script[type="text/javascript"]
+  |  $('.chosen-select').chosen({ allow_single_deselect: true, no_results_text: 'No results matched', width: '100%' });
+
+= form_for [:cp, @development], as: :development do |f|
+  - if @development.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@development.errors.count, "error")} prohibited this meta information from being saved:"
+      ul
+        - @development.errors.full_messages.each do |message|
+          li = message
+
+  .cp-form-item
+    = label_tag(:locale, "Project locale:")
+    br
+    = f.select :locale, I18n.available_locales , { include_blank: false }
+
+  .cp-form-item
+    = label_tag("Title:")
+    = f.trix_editor :title, placeholder: 'Path name', class: 'input'
+
+  .cp-form-item
+    = label_tag("Path name: (Название технологии с большой буквы, например React")
+    = f.text_field :path_name, placeholder: 'Path name', class: 'input'
+
+  .cp-form-item
+    = label_tag("Description:")
+    = f.text_area :description, placeholder: 'Description text', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("Sub Description:")
+    = f.text_area :sub_description, placeholder: 'Sub Description', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("What is ? :")
+    = f.text_area :what_is,  placeholder: 'What is ', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("Where to use Title: (Если нужно сделать заголовки с переносом, то enter в помощь)")
+    = f.trix_editor :where_to_use_title, placeholder: 'Title 1 \n Title 2', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("Where to use cases:")
+    = f.trix_editor :where_to_use_cases, placeholder: 'Case 1 \n Case 2', size: "60x10", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("Reasons: (Заголовок и описание разделяется строкой: <br>. Новый кейс с новой строки")
+    = f.text_area :why_reasons, placeholder: 'Title case 1 <br> Description Case 1', size: "60x10", class: 'textarea'
+
+  .cp-form-item
+      = label_tag("What can we do ?:")
+      = f.text_field :what_can_we_do, placeholder: 'Path name', class: 'input'
+
+  / .cp-form-item
+  /   = f.select :technology_ids, Technology.pluck(:name, :id) , { include_blank: true }, { multiple: true, class: 'chosen-select', data: { placeholder: "Project technologies" } }
+
+  .actions = f.submit

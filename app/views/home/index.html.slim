@@ -1,0 +1,48 @@
+= render 'shared/header'
+.main-section
+  .page__particles
+    .page__title
+      h1.page__main = raw t('home.main')
+    .page__subtitle
+      .page__subtitle__bg
+        = inline_svg("logo_icon_white.svg")
+      h2.page__submain = raw t('home.submain')
+  .page__buttons-block
+    = link_to hire_developers_path, class: "page__button"    
+      = raw t('home.button-hire-developer')
+    = link_to hire_team_index_path, class: "page__button"   
+      = raw t('home.button-hire-team')
+  
+  
+= render 'shared/our_works'
+
+section.clients
+  .clients-bg
+  .clients__block
+    div.clients__client-logo.client-gazprom
+    div.clients__client-logo.client-duma
+    div.clients__client-logo.client-papaJobs
+    div.clients__client-logo.client-hvmn
+    div.clients__client-logo.client-unicreditbank
+    div.clients__client-logo.client-openbank
+    div.clients__client-logo.client-bankzenit
+    div.clients__client-logo.client-jammtravel
+    div.clients__client-logo.client-viasports
+    div.clients__client-logo.client-atol
+    div.clients__client-logo.client-trommsdorf
+
+.testimonials__wrapper
+  = render 'shared/feedbacks'
+
+/ section.rewards
+/   img.rewards__item src=image_path("_ntp-bel.svg")
+/   img.rewards__item src=image_path("_clutch.svg")
+/   img.rewards__item src=image_path("_manifest.svg")
+/   img.rewards__item src=image_path("_top-web-dev.svg")
+/   img.rewards__item src=image_path("_brug.svg")
+/   img.rewards__item src=image_path("_good-firms.svg")
+/   img.rewards__item src=image_path("_europages-member.svg")
+/   img.rewards__item src=image_path("_extract.svg")
+/   img.rewards__item src=image_path("_skilled-member.svg")
+
+= render 'shared/footer'

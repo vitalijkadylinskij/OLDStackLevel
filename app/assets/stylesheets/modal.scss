@@ -1,0 +1,296 @@
+@import "./variables";
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #fff;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #fff;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #fff;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+// hire modal
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 100;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 75%;
+  // height: 85%;
+
+  @include respond-to("small") {
+    width: 50%;
+    height: unset;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+.close-button {
+  cursor: pointer;
+  background-color: lightgray;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.contact-us {
+  background-color: $color-orange;
+  color: #000;
+  padding-bottom: 32px !important;
+}
+
+$margin-bottom: 40;
+.contact-us__input {
+  position: relative;
+  margin-bottom: calc-size($margin-bottom);
+  border-bottom: 1px solid rgba(#000, 0.8);
+
+  @include respond-to("small") {
+    margin-bottom: 2.5vw;
+  }
+  @include respond-to("medium") {
+    margin-bottom: 2.5vw;
+  }
+  @include respond-to("full") {
+    margin-bottom: 35px;
+  }
+}
+
+$control-size: 12;
+$control-padding: 8;
+.contact-us__control {
+  @include fluid-type1(16px, 21px);
+
+  // font-size: #{$control-size}px;
+  padding: #{$control-padding}px #{$control-padding}px #{$control-padding/2}px #{$control-padding/2}px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(#fff, 0.8);
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #000;
+  font-family: $font-main;
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus &:-webkit-autofill {
+    -webkit-text-fill-color: #000;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid #000;
+  }
+
+  @include respond-to("small") {
+    // font-size: calc-size($control-size * 1.5);
+    padding: calc-size($control-padding * 1.5) calc-size($control-padding * 1.5)
+      calc-size($control-padding/2 * 1.5) calc-size($control-padding/2 * 1.5);
+  }
+}
+
+$label-left: 5;
+$label-top: 10;
+$label-size: 12;
+.contact-us__label {
+  color: rgba(#000, 1);
+  // font-size: #{$label-size}px;
+  font-weight: $fw-normal;
+  position: absolute;
+  pointer-events: none;
+  left: calc-size($label-left);
+  top: calc-size($label-top);
+  transition: 0.2s ease all;
+
+  @include fluid-type1(18px, 24px);
+}
+
+$control-focus-size: 12;
+.contact-us__control:focus ~ .contact-us__label,
+.contact-us__control:valid ~ .contact-us__label {
+  top: -3.5vw;
+  color: #000;
+
+  @include fluid-type1(18px, 24px);
+
+  @include respond-to("small") {
+    top: -2.5vw;
+  }
+  @include respond-to("medium") {
+    top: -1.5vw;
+  }
+  @include respond-to("full") {
+    top: -15px;
+  }
+}
+
+.contact-us__input-bar {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &:before,
+  &:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #fff;
+    transition: 0.2s ease all;
+  }
+
+  &:before {
+    left: 50%;
+  }
+
+  &:after {
+    right: 50%;
+  }
+}
+
+/* active state */
+.contact-us__control:focus ~ .contact-us__input-bar:before,
+.contact-us__control:focus ~ .contact-us__input-bar:after {
+  width: 50%;
+}
+
+.contact-us__input-highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+.contact-us__control:focus ~ .contact-us__input-highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+$button-padding-y: 12;
+$button-padding-x: 20;
+$button-size: 12;
+.contact-us__button {
+  padding: #{$button-padding-y}px 0;
+  margin: #{$button-padding-y}px 0;
+  color: #fff;
+  font-family: $font-main;
+  font-size: #{$button-size}px;
+  font-weight: $fw-bold;
+  border: 0;
+  text-transform: uppercase;
+  background-color: #2215f9;
+  cursor: pointer;
+  width: 100%;
+  max-width: 430px;
+  align-self: center;
+
+  @include respond-to("small") {
+    padding: calc-size($button-padding-y * 1.5) 0;
+    margin: calc-size($button-padding-y * 1.5) 0;
+    font-size: calc-size($button-size * 1.5);
+  }
+}
+
+.contact-us__content {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to("small") {
+    flex-direction: row;
+  }
+}
+
+.contact-us__form {
+  display: flex;
+  flex-direction: column;
+  flex: 2 0;
+  // padding: 2vw 2vw 0 0;
+  box-sizing: border-box;
+}
+
+.pop-up {
+  position: absolute;
+  width: auto;
+  padding: 25px;
+  background: #fff;
+  top: -200px;
+  transition: all 0.5s ease;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pop-up--is-visible {
+  top: 50px;
+}
+
+.upload-file {
+  display: none;
+}

@@ -1,0 +1,55 @@
+= render 'shared/header'
+
+.shared__section-title
+	.shared__width-wrapper
+		.shared__section-title__content--hasButton
+			.shared__section-title__content--hasButton__submain
+				.submain-tagline = raw t('case-studies.subtitle') 
+				.submain-button.white.trigger = raw t('hire-developers.request-developer')
+				.shared__section-title__content__vector.case-default
+					= inline_svg("title-dots.svg")
+
+.hire-developers__section-form
+	.shared__width-wrapper
+		.hire-developers__section-form__subtitle = raw t('hire-developers.find')
+
+.hire-developers__section-list
+	.shared__width-wrapper.hire-developers__sidenav-container
+		ul.hire-developers__sidenav
+			li.sidenav__item
+				= link_to t('hire-developers.all-developers'), hire_developers_path, class: 'sidenav__link'
+			- @developments.each do |item|
+				li.sidenav__item
+					= link_to item, hire_developers_path + "&utf8=✓&q%5Bdeveloper_title_cont%5D=#{item}&commit=Search", class: 'sidenav__link'
+				/ = link_to "#{item.path_name}", hire_developers_path + "&utf8=✓&q%5Bdeveloper_title_cont%5D=#{item.path_name}&commit=Search", class: 'sidenav__link'
+		.shared__page-left__vector.hire-developers__case-left
+			= inline_svg('grid-dots-1.svg')
+		.shared__section-grid
+			- @hire_developers.each do |hire_developer|
+				.shared__section-grid__item
+					.shared__section-grid__item-title = hire_developer.developer_title
+					- if hire_developer.technologies
+						.shared__section-grid__item-demand
+							h4 = raw t('shared.section-grid.technologies') 
+							p = hire_developer.technologies.pluck(:name).join(", ").upcase
+					- if hire_developer.frameworks.length > 0
+						.shared__section-grid__item-demand
+							h4 = raw t('shared.section-grid.frameworks') 
+							p = hire_developer.frameworks.pluck(:name).join(", ").titleize
+					- if hire_developer.business_domains.length > 0
+						.shared__section-grid__item-demand
+							h4 = raw t('shared.section-grid.business-domains') 
+							p = hire_developer.business_domains.pluck(:name).join(", ").titleize
+					- if hire_developer.experience_description
+						.shared__section-grid__item-experience
+							= hire_developer.experience_description.html_safe
+		- if @development 
+			= link_to "hire-#{@development.downcase}-developers", class: "hire-developers__link"
+				.hire-developers__button.blue = "#{raw t('shared.section-grid.see-more')} #{@development} #{t('shared.section-grid.development')}?"
+		- else
+			.hire-developers__link 
+				.hire-developers__button.blue.trigger = "#{raw t('shared.section-grid.hire-developers')}"
+
+.hire-developers__section-works = render 'shared/our_works'
+= render 'shared/footer'
+        

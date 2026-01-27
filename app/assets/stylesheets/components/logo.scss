@@ -1,0 +1,83 @@
+@import './variables';
+
+.logo-sticky {
+  transform: scale(0.8);
+  transition: all .5s;
+  animation: logo-animate 0.8s ease forwards;
+  // @include respond-to('small') {
+  //   transform: scale(0.8) translateY(10px);
+  // }
+  // @include respond-to('medium') {
+  //   transform: scale(0.8) translateY(-3px);
+  // }
+}
+
+.logo-default {
+  transform: scale(1);
+  transition: all .5s;
+  animation: logo-animate-default 0.8s ease forwards;
+}
+
+.logo {
+  display: none;
+  position: fixed;
+  left: 1.5vw;
+  top: 5px;
+  border: none;
+  animation-fill-mode: both;
+  animation-duration: 3s;
+  svg {
+    width: 20vw;
+    position: relative;
+    @include respond-to('small') {
+      top: 35px;
+    }
+    @include respond-to('medium') {
+      top: 30px;
+      width: 21vw;
+    }
+    @include respond-to('large') {
+      top: 50px;
+    }
+    @include respond-to('full') {
+      left: 15px;
+      height: 4vw;
+      width: 17vw;
+    }
+  }
+
+  @include respond-to('xs') {
+    display: none;
+  }
+
+  @include respond-to('small') {
+    display: block;
+    left: 2.5vw;
+  }
+
+  @include respond-to('medium') {
+    top: 20px;
+    left: 3.5vw;
+  }
+  @include respond-to('full') {
+    left: 0.5vw;
+  }
+}
+
+
+// @keyframes logo-animate {
+//   0% {
+//     top: 6vw;
+//   }
+//   100% {
+//     top: 0.5vw;
+//   }
+// }
+// @keyframes logo-animate-default {
+//   0% {
+//     top: 0.5vw;
+//   }
+//   100% {
+//     top: 6vw;
+//   }
+// }

@@ -1,0 +1,22 @@
+h1 Editing meta information
+
+= form_for [:cp, @meta_information], as: :meta_information do |f|
+  - if @meta_information.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@post.errors.count, "error")} prohibited this meta information from being saved:"
+      ul
+        - @post.errors.full_messages.each do |message|
+          li = message
+
+  .cp-form-item
+    = f.text_field :title, placeholder: 'Title', class: 'input'
+
+  .cp-form-item
+    = f.text_area :description, placeholder: 'Description', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = f.text_area :keywords, placeholder: 'Keywords', size: "60x4", class: 'textarea'
+
+  .actions = f.submit
+'|
+= link_to 'Back', cp_meta_informations_path

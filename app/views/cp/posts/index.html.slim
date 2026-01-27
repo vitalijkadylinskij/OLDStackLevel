@@ -1,0 +1,29 @@
+.cp__header
+  h2 Blog posts
+
+  .cp__header-actions
+    = link_to 'New post', new_cp_blog_post_path, class: 'cp-btn'
+
+.cp__content
+  - @posts.each do |post|
+    h2
+      = link_to post.title, blog_post_path(post)
+    b Preview image:&nbsp;
+    p = image_tag post.preview_image_url(:thumb) if post.preview_image.present?
+    br
+    b Teaser:&nbsp;
+    p = post.teaser
+    br
+    b Page url:&nbsp;
+    p = post.slug
+    br
+    b Published:&nbsp;
+    p = post.is_published?
+    br
+    = link_to 'Edit', edit_cp_blog_post_path(post)
+    ' &nbsp;
+    = link_to 'Destroy', cp_blog_post_path(post), data: { confirm: 'Are you sure?' }, method: :delete
+    - if post.published_at.nil?
+      ' &nbsp;
+      = link_to 'Publish', publish_cp_blog_post_path(post)
+    hr

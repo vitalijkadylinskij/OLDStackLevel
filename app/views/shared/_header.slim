@@ -1,0 +1,48 @@
+.header
+    .shared__width-wrapper
+        .header__menu-block
+            .header__dots
+            .header-logo
+                = link_to root_path
+                    = inline_svg("new-logo.svg")
+                    img src = image_path('_small_logo.png')
+            .header__menu-items
+                .menu-items__child
+                    .child__dropdown
+                        .child__dropbtn = link_to "#{t('header.hire-developers')}", hire_developers_path, class: "header__link"
+                        .child__dropdown-content
+                            = link_to "#{'React' + t('header.development')}", react_development_index_path, class: "header__link dropdown__link"
+                            = link_to "#{'PHP' + t('header.development')}", php_development_index_path, class: "header__link dropdown__link"
+                    = link_to "#{t('header.hire-team')}", hire_team_index_path, class: "header__link"
+                    = link_to "#{t('header.case-studies')}", case_studies_path, class: "header__link"
+                .menu-items__child
+                    = link_to "#{t('header.services')}", about_us_path, class: "header__link"
+                    = link_to "#{t('header.blog')}", blog_posts_path, class: "header__link"
+                    = link_to "#{t('header.career')}", careers_path, class: "header__link"
+                    .lang
+                        = link_to 'EN', "https://stacklevel.org?locale=en", class: " #{ I18n.locale == :en && 'lang_active' } header__link_lang"
+                        = link_to 'RU', "https://stacklevel.org?locale=ru", class: " #{ I18n.locale == :ru && 'lang_active' } header__link_lang"
+            .header__menu-burger
+                = inline_svg('burger.svg')
+
+    .header__modal-block
+        .menu-items__vector
+            img src = image_path("_burger_bg.png")
+        .shared__width-wrapper
+            .modal-block__header
+                = link_to root_path
+                    img src = image_path('_small_logo.png')
+                .lang
+                    = link_to 'EN', "https://stacklevel.org?locale=en", class: " #{ I18n.locale == :en && 'lang_active' } header__link header__link_lang"
+                    = link_to 'RU', "https://stacklevel.org?locale=ru", class: " #{ I18n.locale == :ru && 'lang_active' } header__link header__link_lang"
+                .modal-block__close-button
+                    = inline_svg('modal-close.svg')
+            = link_to root_path
+                = inline_svg('new-logo.svg')
+            .modal-block__menu-items
+                = link_to "#{t('header.hire-developers')}", hire_developers_path, class: "header__link header__link__modal"
+                = link_to "#{t('header.hire-team')}", hire_team_index_path, class: "header__link header__link__modal"
+                = link_to "#{t('header.case-studies')}", case_studies_path, class: "header__link header__link__modal"
+                = link_to "#{t('header.services')}", about_us_path, class: "header__link header__link__modal"
+                = link_to "#{t('header.career')}", careers_path, class: "header__link header__link__modal"
+

@@ -1,0 +1,38 @@
+/ .section.contact-us style="background-color: ;"
+/   .contact-us__title = t('contact-us.title')
+
+/   .contact-us__content
+/     form.contact-us__form method="POST" action="https://formspree.io/office@stacklevel.org"
+/       input type="hidden" value="#{form_authenticity_token()}" name="authenticity_token"
+
+/       .contact-us__input
+/         input.contact-us__control style="-webkit-box-shadow: inset 0 0 0 50px ; -webkit-text-fill-color: #fff;" name="order_request[name]" required="true" type="text" id="name"
+/         span.contact-us__input-highlight
+/         span.contact-us__input-bar
+/         label.contact-us__label for="name" = t('contact-us.name')
+
+/       .contact-us__input
+/         input.contact-us__control style="-webkit-box-shadow: inset 0 0 0 50px ; -webkit-text-fill-color: #fff;" name="order_request[email]" required="true" type="email" id="email"
+/         span.contact-us__input-highlight
+/         span.contact-us__input-bar
+/         label.contact-us__label for="email" = t('contact-us.email')
+
+/       .contact-us__input
+/         input.contact-us__control style="-webkit-box-shadow: inset 0 0 0 50px ; -webkit-text-fill-color: #fff;" name="order_request[description]" required="true" type="text" id="description"
+/         span.contact-us__input-highlight
+/         span.contact-us__input-bar
+/         label.contact-us__label for="description" = t('contact-us.description')
+
+/       button.contact-us__button style="color: ;" type="submit" = t('contact-us.submit')
+
+/     .contact-us__address
+/       p = t('contact-us.address.email')
+/       p
+/         a.contact-us__address-email href="mailto:contact@stacklevel.org" contact@stacklevel.org
+/       br
+/       p = t('contact-us.address.phone')
+/       p.contact-us__address-phone +375 (29) 344-44-89
+/       p.contact-us__address-office =raw t('contact-us.address.office')
+
+/       / p.contact-us__address-office =raw t('contact-us.address-2.office')
+/       / a class="twitter-follow-button" href="https://twitter.com/stacklevelorg" data-show-count="false"  Follow @stacklevelorg

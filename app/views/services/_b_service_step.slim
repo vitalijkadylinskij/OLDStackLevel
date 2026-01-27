@@ -1,0 +1,11 @@
+.b-service__step
+  .b-service__step-text
+    .b-service__step-number #{t('step')} #{step}
+
+    .b-service__step-title = title
+
+    - if desc
+      .b-service__step-desc = desc
+
+  .b-service__step-icon
+    = inline_svg("#{icon}.svg")

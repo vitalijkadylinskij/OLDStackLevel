@@ -1,0 +1,132 @@
+@import 'variables';
+
+.cp {
+  display: flex;
+  }
+
+.cp-nav {
+  flex-shrink: 0;
+  width: 80px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #252a35;
+  z-index: 3;
+  overflow: hidden;
+  }
+
+.cp-nav__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: #666;
+
+  svg {
+    width: 60px;
+    height: 60px;
+    }
+  }
+
+.cp-nav__item {
+  padding: 10px;
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none;
+
+  &:hover {
+    background-color: lighten(#252a35, 10%);
+    }
+  }
+
+.cp-nav__item-logo {
+  svg {
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+    }
+  }
+
+.cp-nav__item-name {
+
+  }
+
+.cp-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  }
+
+$item-padding: 5;
+$link-size: 15;
+.cp__header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: #ececec;
+  color: #656565;
+
+  h2 {
+    margin: 0;
+    }
+
+  .locale_link {
+    color: #656565;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 1px solid;
+      }
+
+    @include respond-to('small') {
+      font-size: calc-size($link-size * 1.2);
+      margin: 0 calc-size($item-padding * 1.2);
+      }
+
+    @include respond-to('medium') {
+      &:hover {
+        border-bottom: 1px solid;
+        }
+      }
+    }
+  }
+
+.cp__header-actions {
+  margin-left: auto;
+  }
+
+.cp__content {
+  padding: 20px;
+  }
+
+.cp-btn {
+  padding: 8px 16px;
+  font-family: 'formular';
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #009688;
+  color: #fff;
+  text-decoration: none;
+  }
+
+.cp-container {
+  max-width: 800px;
+  margin: 0 auto;
+  }
+
+.cp-form-item {
+  padding-bottom: 20px;
+  }
+
+.editor-toolbar,
+.CodeMirror {
+  border: 1px solid $color-line;
+  border-radius: 0;
+  }

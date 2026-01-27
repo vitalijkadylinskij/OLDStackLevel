@@ -1,0 +1,537 @@
+en:
+  # services page
+  services:
+    title: "We provide custom web development services adjusted exactly \n to your unique \n business needs."
+    development-section-title: "Development"
+    development-section-subtitle:
+      'Many development practices we follow were first described in
+      "Extreme Programming Explained", published more than 25 years ago.
+      Using XP practices improves the quality of our work and happiness of our team.'
+    what-we-do-section-title: "What we do"
+    what-we-do-section-subtitle: "Being a custom development agency
+      means that we provide full-cycle services for web
+      and mobile development, establishing our development
+      methods based on your budget and project requirements.
+      If what you are looking for is to create either
+      a web or mobile application, CRM or ERP system
+      with a unique order processing mode, an e-commerce
+      platform or a unique startup, bug testing, project
+      management, or a design for your website,
+      we can definitely help you get there!"
+
+    consulting-and-estimation-title: "Consulting & Project Estimation FOR FREE"
+    consulting-and-estimation-text: "We would be glad to discuss your project and plans in detail, and provide you an estimate within 48 hours."
+
+    code-review-title: "Code Review & Security Audit"
+    code-review-text: "We are ready to review your application code and provide a strategy for improving security, speed, and scalability."
+
+    application-support-title: "Application Support & Bug Repair"
+    application-support-monitoring: "We take care of monitoring servers & application health"
+    application-support-application: "Handling support of your existing application, we will repair the bugs and optimize your application performance"
+    application-support-reports: "Conclusive reports about found issues and work performed"
+    application-support-questions: "We are open to any questions you may have via phone, email, or Skype"
+
+    web-and-mobile-development-title: Web & Mobile Application Development
+    web-and-mobile-development-tech: We create web and mobile applications using the most up-to-date techniques, methods, and skill
+    web-and-mobile-development-transparency: We understand the need for transparency, and so the development process will remain visible to our customer throughout the duration of their project
+    web-and-mobile-development-review: Every line of code we write undergoes a code review process
+    web-and-mobile-development-tests: Our code is covered by thorough unit tests
+    web-and-mobile-development-tools: We use automatic tools and methods to verify code quality
+
+    ruby/rails-section-text:
+      'Teams using the Ruby on Rails can bring secure, stable products to market quickly
+      with a lower total cost of ownership than other tools. The framework is "batteries
+      included." The surrounding community has been active and enthusiastic for more than 10 years.'
+    see-why-we-love-rails: "See why we love Rails"
+    node-section-text:
+      "Node.js shines in real-time web applications employing push technology over websockets.
+      What is so revolutionary about that? Well, after over 20 years of stateless-web based on the stateless request-response paradigm,
+      we finally have web applications with real-time, two-way connections, where both the client and server can initiate communication, allowing them to exchange data freely."
+    see-our-nodejs-work: "See our Node.js work"
+    other: "Other languages and frameworks:"
+    other-text: "In addition to Ruby on Rails and Node.js we use other programming languages and frameworks."
+    second-section-title: "Cooperation models"
+    second-section-subtitle:
+      "We strongly believe that a successful outsourcing experience is a result of thorough
+      planning and sound strategy development in regard to project implementation and
+      management techniques."
+    fixed-price: "Fixed price"
+    time-and-material: "Time and material"
+    dedicated-team: "Dedicated team"
+  # header partial
+  header:
+    hire-developers: "HIRE DEVELOPERS"
+    hire-team: "HIRE TEAM"
+    case-studies: "OUR CASES"
+    services: "ABOUT US"
+    blog: "BLOG"
+    career: "CAREER"
+    development: " Development"
+  # contact us partial
+  contact-us:
+    title: "Hire us"
+    name: "Your name"
+    email: "Your email"
+    budget: "Your budget"
+    description: "How can we help you?"
+    submit: "Send request"
+    address:
+      email: "Send us an email:"
+      phone: "or call us:"
+      office: "30/403, St. Gamarnika, <br> Minsk, 220131, Republic of Belarus"
+    address-2:
+      phone: "or call us:"
+      office: "204 W. 14th Street, <br> Wilmington, DE 19801, USA"
+    pop-up: "Your Mail has been successfully sent!"
+  #footer
+  footer:
+    team-developers: <span>30+<br>experienced</span><br>developers
+    years-on-market: <span>3+ years</span><br>on the market
+    completed-projects: <span>20+<br>successfull</span><br>projects
+    returned-customers: <span>92%<br>of returned</span><br>customers
+    positive-testimonials: only<br><span>positive</span><br>feedback
+    more-about-us: Want to know more about us?
+    contact-header: contacts
+    be-in-touch-header: be in touch
+    hire-us: hire us
+
+  # order modal partial
+  order-modal:
+    title: "Thank you!"
+    text: "Your message sent. Shortly our manager will contact you."
+    name: "Alex Pukhalski"
+    caption: "your personal manager"
+  # home page
+  home:
+    main: <p>Custom software</p><p>Development</p><p>Company</p>
+    submain: We build high-end<br/>technological solutions<br/>to scale businesses
+    button-hire-developer: Want to find developers?
+    button-hire-team: Want to hire a dedicated team?
+
+    our-works-title: On more than 20 projects
+    slider:
+      slide-header: Marketplace for marketplace
+      slide-subheader-domains: Business Domains
+      slide-text-domains: E-commerce, Retail
+      slide-subheader-responsibilities: Our Responsibilities
+      slide-text-responsibilities: Mangement, UI/UX,
+      slide-subheader-dev: Development, UAT
+      slide-subheader-technologies: Key technologies
+      slide-text-technologies: PHP, HTML, CSS
+
+      button-cases: MORE CASES
+
+    testimonials-header: Our clients about us
+
+    feedback-author-1: HENRY
+    feedback-author-2: Harry
+    feedback-author-3: anna
+    feedback-author-4: peggi
+    feedback-author-5: carry
+    feedback-author-6: tony
+    feedback-comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+    feedback-job: job tittle
+    first-section-text-1: STACKLEVEL provides custom web development services adjusted exactly to your unique business needs. Our office is staffed by some of the most talented and innovative professionals, who specialize in web and mobile development as well as the variety of other technological and software related fields.
+    first-section-text-2: "We have successfully delivered solutions to <span style='font-weight: 600;'>over 30 companies</span> across varying business models and we are always striving for our expertise expand. Our experience is drawn from projects throughout the United States, United Kingdom, Russia and Europe."
+
+    services-title: "Our services"
+
+    consulting-and-estimation-title: "Consulting & Project Estimation FOR FREE"
+    consulting-and-estimation-text: "We would be glad to discuss your project and plans in detail, and provide you an estimate within 48 hours."
+
+    code-review-title: "Code Review & Security Audit"
+    code-review-text: "We are ready to review your application code and provide a strategy for improving security, speed, and scalability."
+
+    application-support-title: "Application Support & Bug Repair"
+    application-support-text: "We take care of monitoring servers & application health. By supporting your application, we will repair the bugs and optimize performance. You will be provided with final reports on the problems found and the work performed."
+
+    web-and-mobile-development-title: "Web & Mobile Application Development"
+    web-and-mobile-development-text: "We create applications using the most up-to-date technologies. The development process will remain transparent to our customers throughout the development period. Every line of code is thoroughly checked and covered by unit tests."
+
+    portfolio-title: "Our portfolio"
+
+    service-title: "Our clients"
+
+    web-development: "Web development"
+    back-end: "Back-end"
+    development: "development"
+    and: "and"
+    rails-text: "are in the heart of most projects and the essential tool of choice."
+    advanced-text:
+      "To power the most high-performant projects, to withstand high loads,
+      to build networking applications or to process large amounts of data, we add"
+    to-the-mix: "to the mix."
+    advanced-text-p2:
+      "is our choice for building real-time applications. Using the power
+      of JavaScript, we have the ability to build isomorphic"
+    and-desktop: "and desktop"
+    applications: "applications."
+    front-end: "Front-end"
+    with: "with"
+    redux-text:
+      "is our top choice for building the best client-side experience on
+      a single-page application."
+    node-text:
+      "the latest version of JavaScript, are the foundation for front-end
+      development. Front-end is built utilizing"
+    all-services: "See all our services"
+    title-2: "Clients and partners"
+    clients-and-partners: "Our clients and partners"
+  # react.js page
+  react:
+    subtitle:
+      "React and Redux is our top choice for building the best client-side
+      experience on a single-page application."
+    first-section-title: "Why we use React"
+    first-section-text:
+      "The great thing about React is that it can be implemented gradually
+      (if you want to). Some JS frameworks require you to make a big investment
+      in their infrastructure in order to start getting any usable results, but
+      React allows you to start replacing components of your web app piece-by-piece.
+      It is highly effective for teams because it encourages the reuse of UI patterns
+      and requires a readable syntax."
+    first-block-body:
+      "We prefer to use React and Redux when we’re building a full client side
+      application as opposed to a website with some rich interactions."
+    second-block-body:
+      "Redux is a Flux Library we use to maintain state when using React. Using Redux you
+      define actions which you use to modify your state. This prevents bugs that were common
+      when using plain ReactJS."
+    third-block-body:
+      "React Native gives our team the chance to write fast, native applications on Android and
+      iOS in a single codebase while sharing large amounts of logic. This means we can ship faster
+      to both platforms."
+    second-section-title: "Why we сhoose React.js:"
+    list:
+      item-1: "UI code is readable and maintainable"
+      item-2: "Componentized UI is the future of web development"
+      item-3: "Easy to test"
+    third-section-title: "We used React.js while working with great companies"
+  # ruby on rails page
+  rails:
+    subtitle:
+      "Experience tells us that by using Ruby on Rails, we can rapidly get
+      your products to market, while maintaining a high standard of code quality."
+    first-section-title: "Why we love Rails"
+    first-block-title: "Batteries included"
+    first-block-body:
+      "Rails was the first non-enterprise, opinionated, and complete
+      Web framework. It had built-in pluralization of nouns! There are database
+      migrations, distinct runtime environments and many more fascinating tools!
+      A huge bag of helpful methods, which abstract common tasks and help code
+      to read beautifully. It takes mere minutes to spin up a server and deploy
+      to Heroku, for free!"
+    second-block-title: "Active development"
+    second-block-body: "We use Rails because it solves its specific problem
+      more efficiently, thanks to the years of development over other systems.
+      Django is the closest competitor, but it has historically lacked
+      the people-power that the Rails ecosystem had. For secure, stable and
+      simple CRUD: Rails. For most of the Web: Rails."
+    third-block-title: "A wonderful community"
+    third-block-body:
+      "Once we got into Rails it became clear that there was a great
+      open source community around Ruby and Rails which made doing new or even
+      scary things a lot simpler."
+    fourth-block-title: "When Rails isn't a good choice"
+    fourth-block-body:
+      "Go or Elixir/Phoenix make more sense for The non-web internet:
+      chat, email, SSH, Redis sockets, command-line API tools, custom
+      network servers, anything synchronous. Anything that scales
+      vertically, or has a significant amount of traffic (>10kRPM),
+      should probably not be done in Rails."
+    second-section-title: "Why сhoose Ruby on Rails development services:"
+    list:
+      item-1: "Readable and mostly self-documenting code"
+      item-2: "Huge collection of ready open source solutions"
+      item-3: "Speedy development with less code written"
+      item-4: "Good test environment and focus on automated testing"
+    third-section-title: "We used Ruby on Rails while working with great companies"
+  # nodejs page
+  nodejs:
+    subtitle: "Choosing a programming platform depends on several
+      aspects including speed, learning curve, scalability, ease of coding, community and professional support and several other factors.
+      In all these parameters Node.js come as the champion among the server side languages and no wonder that startups will show convincing preference to it."
+    first-section:
+      title: "Why we use Node.js at STACKLEVEL?"
+      text:
+        "Node.js is an open-source cross-platform runtime environment written in
+        JavaScript; the most popular programming language in the world. It’s greatest
+        strengths are versatility, lightning fast speed of processing and high scalability."
+      block:
+        first-title: "High Performance"
+        first-body:
+          "Node.js uses the V8 JavaScript engine developed by Google; an
+          extremely fast engine! If your application does a lot of reading and writing
+          to the internet or the filesystem, Nodejs is the most expedient technology out
+          there that can be used to build your application"
+        second-title: "Highly Scalable"
+        second-body:
+          "Node.js works on a principle called the event loop, which is unlike other tradition
+          web application frameworks; something that makes it all more scalable
+          for real-time apps. Scale is not something you will worry about when choosing to use Node.js"
+        third-title: "Real Time"
+        third-body:
+          "Node.js excels in real time applications because of WebSockets. WebSockets
+          are open 2-way communication channels between the client and the server.
+          And this makes it really easy to build realtime applications like Games,
+          Chat Engines, etc"
+    second-section:
+      title: "Why сhoose Node.js development services:"
+      list:
+        item-1: "Low level API"
+        item-2: "Non-blocking and an event-driven I/O model"
+        item-3: "Fast and scalable network applications"
+        item-4: "Easily updating, sharing and reusing of code"
+        item-5: "Ideal for real-time web applications"
+    third-section:
+      title: "What we use in Node.js stack?"
+      block:
+        first-body:
+          "Sails.js is the most popular MVC framework for Node.js, designed
+          to emulate the familiar MVC pattern of frameworks like Ruby on Rails,
+          but with support for the requirements of modern apps: data-driven
+          APIs with a scalable, service-oriented architecture."
+        second-body:
+          "Koa.js is a new web framework designed by the team behind Express,
+          which aims to be a smaller, more expressive, and more robust foundation
+          for web applications and APIs. Through leveraging generators Koa allows
+          you to ditch callbacks and greatly increase error-handling."
+        third-body:
+          "Meteor is a full-stack JavaScript platform for developing modern web and
+          mobile applications. Meteor includes a key set of technologies for building
+          connected-client reactive applications, a build tool, and a curated set of
+          packages from the Node.js and general JavaScript community."
+  # dedicated team page
+  dedicated-team:
+    title: "Dedicated team"
+    step-1:
+      title: "Enlightening with your ideas"
+      desc: "We communicate with you and highlight all the business requirements of your project."
+    step-2:
+      title: "Conformity assessment"
+      desc: "We offer you the team of developers according to the your need."
+    step-3:
+      title: "Interviewing the developers"
+      desc: "We transfer you the developers CVs and the interview stage begins. The specialists are hired according to the your requirements."
+    step-4:
+      title: "Monthly basis payment"
+      desc: "We report you about developers hours, conduct a retrospective for the month and send the invoice."
+  # fixed price page
+  fixed-price:
+    title: "Fixed price"
+    step-1:
+      title: "Enlightening with your ideas"
+      desc: "We communicate with you and highlight all the business requirements of your project."
+    step-2:
+      title: "Technicals specification"
+      desc: "Our business analyst write a specification which describes all the features and workflow. After that technical specialist make estimations."
+    step-3:
+      title: "Adjusting the features"
+      desc: "We adjust the feature regarding the budges and time terms."
+    step-4:
+      title: "Prepayment"
+    step-5:
+      title: "Development phase"
+      desc: "We develop your product and send weekly reports with analytics."
+    step-6:
+      title: "Launch the project"
+      desc: "We work with you before running the project or until you are need."
+    step-7:
+      title: "Payment"
+    step-8:
+      title: "Application support"
+      desc: "We will make changes based on user feedback after success launch."
+  # time and material page
+  time-and-material:
+    title: "Time & material"
+    step-1:
+      title: "Enlightening with your ideas"
+      desc: "We communicate with you and highlight all the business requirements of your project."
+    step-2:
+      title: "Conformity assessment"
+      desc: "We offer you the team of developers according to the your need."
+    step-3:
+      title: "Interviewing the developers"
+      desc: "We transfer you the developers CVs and the interview stage begins. The specialists are hired according to the your requirements."
+    step-4:
+      title: "Hourly basis payment"
+      desc: "We report you about developers hours, conduct a retrospective for the month and send the invoice."
+    step-5:
+      title: "Release the project"
+      desc: "We launch the final version of application."
+    step-6:
+      title: "Application support"
+      desc: "We will make changes based on user feedback after success release."
+  # case studies
+  case-studies:
+    main: Main
+    submain: Our Works
+    subtitle: We provide you with developers<br/>and dedicated teams
+    find: Find cases
+    search: Find for cases
+    select-tech: Enter technology
+    select-seniority: Select seniority
+
+    business_results: Business results
+    business_domains: Business Domains
+    responsibilities: Our responsibilities
+    development: Development, UAT
+    key_technologies: Key technologies
+    technologies: Technologies
+    business_case_description: Business case description
+    developted_solution_description: Developted solution description
+    solution: Solution
+    hire-developer: Do you want to hire developer?
+    hire-team: Do you want to hire dedicated team?
+
+    business-challenge: Business Challenge
+    section: Section
+    technology: Technology
+    duration: Duration
+    team: Team
+
+    result: Result
+    proud_of: What are we proud of?
+  # hire-developers
+  hire-developers:
+    main: Main
+    submain: Hire web developers
+    subtitle: We provide you with developers<br/>and dedicated teams
+    find: Find developers
+    search: Search
+    select-tech: Select Technology
+    select-seniority: Select seniority
+
+    all-developers: All Developers
+
+    technologies: TECHNOLOGIES AND DATABASE
+    frameworks: FRAMEWORKS
+    domains: DOMAINS
+    dev-tools: DEVELOPMENT TOOLS
+    responsibilities: CRUCIAL RESPONSIBILITIES
+    resp-1: Logic and code development
+    resp-2: Solution architecture
+    resp-3: Leading the dev. team
+    resp-4: Solution architecture
+    resp-5: Logic and code development
+    request-developer: REQUEST DEVELOPER
+    request-team: REQUEST TEAM
+    projects: SEE PROJECTS WHERE THE DEVELOPER PARCTICIPATED
+    other-developers: SEE OTHER DEVELOPERS
+
+    what-is: What is
+    where-to-use: Where to use
+    why: Why
+    what-can-we-do: What STACKLEVEL GROUP team can do for your business
+
+  # hire team
+  hire-team:
+    main: Main
+    submain: Hire dedicated team
+    subtitle: We provide you with developers<br/>and dedicated teams
+    request-team: Request team
+    step-title: We help you to choose the expert or hire a dedicated team you need
+    step: Step
+    step-1: Together we define your business needs
+    step-2: We prove you with a perfect specialist or a dedicated team
+    step-3: You start an effective partnership and scale your business
+    team-include-title: Our experts
+    project-manager: Hire a project manager
+    project-manager-description: High-performing talented STACKLEVEL GROUP experts bring order to every chaos and manage projects effectively.
+    business-analyst: Hire a business analyst
+    business-analyst-description: Lowering project costs and increasing the value of the business? That’s what STACKLEVEL GROUP business analysts will bring you.
+    designer: Hire a UX/UI designer
+    designer-description: STACKLEVEL GROUP UX/UI designer will identify the user-persona of your business and will implement features to grow your revenue.
+    developers: Hire developers
+    developers-description: "Experienced dedicated developers: php developers, iOS/Android developers, react js developers."
+    QA: Hire a QA engineer
+    QA-description: Deploying only perfectly working products within deadlines — is what STACKLEVEL GROUP QA engineers do. See for yourself!
+    accomplished-projects: Check out our successful projects
+  # about-us
+  about-us:
+    main: Main
+    submain: About us
+    subtitle: We provide you with developers<br/>and dedicated teams
+    text-1:
+      "We believe in the personal approach and the high quality of code. Because, let’s be honest, the product should work properly.
+      We know that every business can become a market leader with digitalization. From mobile applications developing to creating a complex system — the STACKLEVEL GROUP development team is always ready to help."
+    text-2: "The years of experience and high level of clients’ trust make STACKLEVEL GROUP team reliable partners on the way of success. Business analysis, engineering, user-friendly ux/ui design, proper testing, product management — we guide you through the way. No need to worry about the quality with STACKLEVEL GROUP — you can focus on your business, while we do the rest."
+    text-3: ""
+    ceo:
+      name: Maxim Garbar
+      comment: "We provide innovative developing and consulting services to make businesses of our clients grow and become market leaders. The client’s success is our success."
+  # careers
+  careers:
+    main: Main
+    submain: Careers
+    subtitle: We provide you with developers<br/>and dedicated teams
+    technologies: "Technologies:"
+    frameworks: "Frameworks:"
+    send-cv: Send CV
+    title-1: We’re always looking for new talents. Join us!
+    title-2: If you didn’t find your vacancy, just send a message, and we will figure it out!
+    hire-us: Hire us
+
+  # shared
+  shared:
+    section-grid:
+      technologies: "Technologies:"
+      frameworks: "Frameworks:"
+      business-domains: "Business-Domains:"
+      see-more: Do you want to know more about
+      development: Development
+      hire-developers: Do you want to hire developers?
+
+  react-development:
+    first-title: "If you are looking for a user-friendly and easy-to-use application — react native app development is the best option for you. Expand your business easily with STACKLEVEL GROUP react development team."
+    what-is-title: "What is React?"
+    what-is-desc: "Do you use Facebook, Instagram, Yahoo or Airbnb? If yes, congratulations — you’ve already got acquainted with React JS. To be clear, ReactJS was created by Facebook, and it is an open-source mobile application framework. All the applications for iOS and Android, created on React are native and easy-to-scale."
+    where-to-use: "Where to use it?"
+    where-to-use-title: "React JS can help your business in many ways. <br/> We provide all kind of react native app development services:"
+    where-to-use-desc: <ul>
+      <li>React mobile apps development for iOS And Android</li>
+      <li>Upgrading existing web applications with React</li>
+      <li>Integration React JS-plugins into existing solutions</li>
+      <li>React native web apps development</li>
+      <li>React JS front-end development</li>
+      </ul>
+    why:
+      title: "Why React?"
+      title-1: "Saves your time and money"
+      desc-1: "Money and time — there are two most important questions while doing business. To save both is almost a miracle. And React native development can make it happen! Easy start and fast goals achieved are the reasons many companies choose react js development for their mobile applications. You can be one step ahead from the competitors if you choose react native app development."
+      title-2: "Offers cross-platform mobile app development"
+      desc-2: "What if we say that using react native development can allow you to create only one code for both Android and iOS and make all apps run smoothly? It is real with React JS. Within a short time, you can create mobile applications for any kind of business! All you need is a talented React Developer (like one of the STACKLEVEL GROUP ones) and willing to rock your market."
+      title-3: "The user-experience is always on top"
+      desc-3: "React Native was created by Facebook for mobile apps. That’s why it is the best option if you want your mobile application to be as user-friendly as possible. Fast loading speed, lovable interface, and simple navigation — that is what makes mobile applications created with react native development great. You won’t have to choose between quality and functionality — react-native can do both."
+      title-4: "Simple integration"
+      desc-4: "There is no need to think about how to integrate your react native mobile application with third-party services. React native allows you to add plugins and APIs (like payment gateways, maps and so on) with your mobile app."
+    what-can-we-do: "What STACKLEVEL GROUP team can do for your business?"
+    what-can-we-do-desc: "STACKLEVEL GROUP is an experienced software development company. We offer a full cycle of react software development services and help our clients to scale their business and be one step ahead of the competitors. Talented react developers are always doing their best to help our clients achieve all their business goals."
+
+  php-development:
+    first-title: "Build high-quality web solutions with experienced STACKLEVEL GROUP PHP developers."
+    what-is-title: "What is PHP development?"
+    what-is-desc: "PHP, being one of the most popular open-source languages of programming, is an essential part of almost every web-based solution. From easy-to-use websites to high-loaded applications. STACKLEVEL GROUP PHP developers have strong expertise in creating secure, stable and easy-to-scale web applications of all kinds to make businesses grow."
+    where-to-use: "Where to use it?"
+    where-to-use-title:
+      "PHP language is perfect for all kinds of web development.
+      We provide all kind of php web development services:"
+    where-to-use-desc: <ul>
+      <li>Custom web applications development</li>
+      <li>All kinds of websites development</li>
+      <li>Social networking solutions development</li>
+      <li>E-commerce development</li>
+      <li>Custom PHP development</li>
+      </ul>
+    why:
+      title: "Why PHP development?"
+      title-1: "Saves your time"
+      desc-1: "PHP development allows reusing parts of the code and it was created to develop web applications quickly. There is a wide variety of PHP frameworks like Symfony or Laravel. Each framework has its own specific functionality and provides time-saving development for every business need."
+      title-2: "Reduce your costs"
+      desc-2: "PHP is an open-source language — it means that using PHP is more cost-effective compared to all other technologies used for web application development. No additional spendings on downloading additional plugins, licensing or expensive web hosting. Affordable and fast-to-implement — what can be better for your business?"
+      title-3: "Allows to implement many features"
+      desc-3: "If your business needs frequent updates, it is important to have a development model, which can be updated easily as soon as you need it. PHP development makes interactions built without additional development. Because of easily decipherable syntax, using PHP development allows you to change everything freely and in a short period of time."
+      title-4: " Secure and stable"
+      desc-4: "PHP is used by almost 85% of all web applications. It is used for both highly-loaded web solutions and simple websites. PHP language was created to cover both problems of stability (we all know how unstable websites can affect e-commerce companies) and safety. Choose a talented developer from STACKLEVEL GROUP team — and never worry how to protect your web application."
+    what-can-we-do: "What STACKLEVEL GROUP team can do for your business?"
+    what-can-we-do-desc: "STACKLEVEL GROUP is an experienced software development company. We offer a full cycle of php web development services and help our clients to scale their business and be one step ahead of the competitors. Talented php developers are always doing their best to help our clients achieve all their business goals."

@@ -1,0 +1,35 @@
+script[type="text/javascript"]
+  |  $('.chosen-select').chosen({ allow_single_deselect: true, no_results_text: 'No results matched', width: '100%' });
+
+= form_for [:cp, @feedback], as: :feedback do |f|
+  - if @feedback.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@feedback.errors.count, "error")} prohibited this meta information from being saved:"
+      ul
+        - @feedback.errors.full_messages.each do |message|
+          li = message
+
+  .cp-form-item
+    = label_tag(:locale, "Project Locale:")
+    br
+    = f.select :locale, I18n.available_locales , { include_blank: false }
+
+  .cp-form-item
+    = label_tag("Author Name:")
+    = f.text_field :author_name, placeholder: 'Author name', class: 'input'
+    
+  .cp-form-item
+    = label_tag(:author_photo, "Author Photo:")
+    br
+    = f.file_field :author_photo
+
+  .cp-form-item
+    = label_tag("Feedback Text:")
+    = f.text_area :feedback_text, placeholder: 'Feedback text', size: "60x4", class: 'textarea'
+
+  .cp-form-item
+    = label_tag("Job Title:")
+    = f.text_field :job_title, placeholder: 'Job title', class: 'input'
+  
+  .actions = f.submit
+

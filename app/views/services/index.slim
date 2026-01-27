@@ -1,0 +1,122 @@
+.services
+  = render 'shared/header', css: 'default', logo: true
+
+  .page__header.page__header--main
+    .service__title = t('services.title')
+
+  .service__section
+    /.service__section-title
+      = t('services.what-we-do-section-title')
+
+    .service__section-text = t('services.what-we-do-section-subtitle')
+
+    .services__competences
+      .services__competence
+        .services__competence-header
+          .services__competence-icon = inline_svg('icons/code-rate.svg')
+          .services__competence-title = t('services.consulting-and-estimation-title')
+
+        .services__competence-text = t('services.consulting-and-estimation-text')
+
+      .services__competence
+        .services__competence-header
+          .services__competence-icon = inline_svg('icons/bugs-search.svg')
+          .services__competence-title = t('services.code-review-title')
+
+        .services__competence-text = t('services.code-review-text')
+
+      .services__competence
+        .services__competence-header
+          .services__competence-icon = inline_svg('icons/error-404.svg')
+          .services__competence-title = t('services.application-support-title')
+
+        ul.services__competence-list
+          li.services__competence-item = t('services.application-support-monitoring')
+          li.services__competence-item = t('services.application-support-application')
+          li.services__competence-item = t('services.application-support-reports')
+          li.services__competence-item = t('services.application-support-questions')
+
+      .services__competence
+        .services__competence-header
+          .services__competence-icon = inline_svg('icons/programming.svg')
+          .services__competence-title = t('services.web-and-mobile-development-title')
+
+        ul.services__competence-list
+          li.services__competence-item = t('services.web-and-mobile-development-tech')
+          li.services__competence-item = t('services.web-and-mobile-development-transparency')
+          li.services__competence-item = t('services.web-and-mobile-development-review')
+          li.services__competence-item = t('services.web-and-mobile-development-tests')
+          li.services__competence-item = t('services.web-and-mobile-development-tools')
+
+  .service__section.service__section--gray
+    .service__section-title = t('home.web-development')
+
+    .section__rows
+      .section__row
+        .section__subtitle
+          span #{t('home.back-end')}&nbsp;#{t('home.development')}
+        .section__text
+          p
+            strong.tech-tag.tech-ruby Ruby
+            '&nbsp;#{t('home.and')}
+
+            strong
+              = link_to 'Ruby on Rails (RoR)', services_ruby_on_rails_path, class: 'tech-tag tech-rails'
+
+            '&nbsp;#{t('home.rails-text')}
+
+          p
+            strong
+              = link_to 'Node.js', services_nodejs_path, class: 'tech-tag tech-nodejs'
+
+            '&nbsp;#{t('home.advanced-text-p2')} (
+
+            strong.tech-tag.tech-meteor Meteor.js
+            '&nbsp;) #{t('home.and-desktop')} (
+
+            strong.tech-tag.tech-electron Electron
+            '&nbsp;) #{t('home.applications')}
+
+      .section__row
+        .section__subtitle
+          span #{t('home.front-end')}&nbsp;#{t('home.development')}
+        .section__text
+          p
+            strong
+              = link_to 'React', services_reactjs_path, class: 'tech-tag tech-react'
+
+            '&nbsp;#{t('home.with')}
+
+            strong.tech-tag.tech-redux Redux
+            '&nbsp;#{t('home.redux-text')}
+
+            strong.tech-tag.tech-nodejs Node.js
+            '&nbsp;#{t('home.and')}
+
+            strong.tech-tag.tech-es6 ES6
+            '&nbsp;, #{t('home.node-text')}
+
+            strong.tech-tag.tech-sass Sass
+            ',
+
+            strong.tech-tag.tech-postcss PostCSS
+            ', #{t('home.and')}
+
+            strong.tech-tag.tech-webpack Webpack
+            '.
+
+  .service__section.service__section--cooperation
+    .service__section-title
+      = t('services.second-section-title')
+    .service__section-text
+      = t('services.second-section-subtitle')
+
+      .service__section-list
+        ul
+          li = link_to "#{t('services.fixed-price')}", services_fixed_price_path
+
+          li = link_to "#{t('services.time-and-material')}", services_time_and_material_path
+
+          li = link_to "#{t('services.dedicated-team')}", services_dedicated_team_path
+
+  = render 'shared/contact_us', color: '#ed3e44'

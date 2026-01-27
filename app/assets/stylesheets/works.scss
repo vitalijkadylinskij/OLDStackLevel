@@ -1,0 +1,304 @@
+// Place all the styles related to the Career controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import './variables';
+
+$section-padding-y: 120;
+$section-padding-x: 32;
+.works-section {
+  margin: 0 auto;
+  padding: #{$section-padding-y}px #{$section-padding-x}px;
+
+  @include respond-to('small') {
+    padding: calc-size($section-padding-y * 1.5) calc-size($section-padding-x * 7);
+    }
+  }
+
+$title-size: 40;
+$title-border: 10px;
+$title-border-padding: 5px;
+.works-section__title {
+  display: inline;
+  padding-bottom: $title-border-padding;
+  font-size: #{$title-size}px;
+  font-weight: $fw-black;
+  line-height: 1;
+
+  @include respond-to('small') {
+    font-size: calc-size($title-size * 1.5);
+    }
+  }
+
+$section-text-size: 13;
+$section-padding-top: 24;
+.works-section__text {
+  font-size: #{$section-text-size}px;
+  padding-top: #{$section-padding-top}px;
+  line-height: $line-height;
+  color: $color-semi-black;
+
+  @include respond-to('small') {
+    font-size: calc-size($section-text-size * 1.5);
+    padding-top: calc-size($section-padding-top * 2);
+    }
+  }
+
+
+$projects-section-padding: 20;
+
+.works-section__projects {
+  display: flex;
+  flex-wrap: wrap;
+  padding: #{$projects-section-padding}px;
+  border-right: 2px solid #fff;
+
+  @include respond-to('small') {
+    padding: 0;
+    }
+  }
+
+$project-block-margin: 16;
+
+.works-section__project {
+  display: block;
+  width: 100%;
+  flex: 1 1 auto;
+  padding-top: 30%;
+  margin-bottom: #{$project-block-margin}px;
+  min-height: 200px;
+  box-sizing: border-box;
+  position: relative;
+  background-color: $color-semi-black;
+  transition: all 0.25s linear;
+  color: #fff;
+  overflow: hidden;
+
+
+  @include respond-to('small') {
+    margin-bottom: 0;
+    border-bottom: 2px solid #fff;
+    flex: 1 1 33.3%;
+
+    &--1 {
+      flex: 1 1 50%;
+    }
+
+    &--2 {
+      flex: 1 1 50%;
+    }
+
+    &--3 {
+      flex: 1 1 66.6%;
+
+      .works-section__project-info {
+        max-width: 50%;
+      }
+    }
+
+    &:nth-child(even) {
+      border-left: 2px solid #fff;
+    }
+
+    &:nth-child(odd) {
+      border-left: 2px solid #fff;
+    }
+  }
+
+    &:hover {
+      box-shadow: 0 23px 23px -15px #777;
+      transition: 0.2s linear;
+
+      .works-section__project-bg {
+        // background-position: 55% 50%;
+        filter: blur(3px);
+      }
+
+      .works-section__project-services,
+      .works-section__project-technologies,
+      .works-section__project-footer {
+        opacity: 1;
+      }
+    }
+  }
+
+.works-section__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  }
+
+.works-section__project-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  filter: blur(0);
+  transition: all 0.25s linear;
+  will-change: filter;
+  }
+
+$project-title-size: 18;
+$project-title-border-padding: 18;
+.works-section__project-title {
+  margin-top: auto;
+  font-size: #{$project-title-size}px;
+  font-weight: $fw-black;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include respond-to('small') {
+    margin-top: 0;
+    min-height: calc-size($project-title-size * 4.5);
+    font-size: calc-size($project-title-size * 1.5);
+    padding-bottom: calc-size($project-title-border-padding);
+    }
+  }
+
+$project-info-padding: 24;
+.works-section__project-info {
+  width: 100%;
+  height: 100%;
+  padding: #{$project-info-padding}px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: left;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  transition: all 0.3s linear;
+
+  @include respond-to('small') {
+    padding: calc-size($project-info-padding);
+    box-sizing: border-box;
+    bottom: 0;
+    background-color: transparent;
+    }
+  }
+
+
+$project-desc-size: 12;
+$project-desc-padding: 20;
+.works-section__project-description {
+  font-size: #{$project-desc-size}px;
+  padding-bottom: #{$project-desc-padding}px;
+  line-height: $line-height;
+  display: none;
+  color: #fff;
+
+  @include respond-to('small') {
+    display: block;
+    font-size: calc-size($project-desc-size * 1.5);
+    padding-bottom: calc-size($project-desc-padding);
+    }
+  }
+
+
+$project-services-margin: 10;
+.works-section__project-services {
+  display: none;
+  flex-wrap: wrap;
+  margin-bottom: #{$project-services-margin}px;
+  opacity: 0;
+  transition: all 0.25s linear;
+
+  @include respond-to('small') {
+    display: flex;
+    font-size: calc-size($project-services-margin * 1.5);
+  }
+}
+
+$project-service-margin: 5;
+$project-service-size: 14;
+.works-section__project-service {
+  margin: 0 #{$project-service-margin}px #{$project-service-margin}px 0;
+  padding: #{$project-service-margin / 2}px #{$project-service-margin}px;
+  font-size: #{$project-service-size}px;
+  border-radius: 2px;
+  background-color: rgba(#000, 0.4);
+
+  @include respond-to('small') {
+    margin: 0 calc-size($project-service-margin) calc-size($project-service-margin) 0;
+    padding: calc-size($project-service-margin / 2) calc-size($project-service-margin);
+    font-size: calc-size($project-service-size);
+    border-radius: calc-size($project-service-margin / 2);
+  }
+}
+
+$project-technologies-margin: 10;
+.works-section__project-technologies {
+  display: none;
+  flex-wrap: wrap;
+  margin-bottom: #{$project-technologies-margin}px;
+  opacity: 0;
+  transition: all 0.25s linear;
+
+  @include respond-to('small') {
+    display: flex;
+    font-size: calc-size($project-technologies-margin * 1.5);
+  }
+}
+
+$project-technology-margin: 5;
+$project-technology-size: 14;
+.works-section__project-technology {
+  margin: 0 #{$project-technology-margin}px #{$project-technology-margin}px 0;
+  padding: #{$project-technology-margin / 2}px #{$project-technology-margin}px;
+  font-size: #{$project-technology-size}px;
+  border-radius: 2px;
+  color: #000;
+  background-color: rgba(#fff, 0.7);
+
+  @include respond-to('small') {
+    margin: 0 calc-size($project-technology-margin) calc-size($project-technology-margin) 0;
+    padding: calc-size($project-technology-margin / 2) calc-size($project-technology-margin);
+    font-size: calc-size($project-technology-size);
+    border-radius: calc-size($project-technology-margin / 2);
+  }
+}
+
+.works-section__project-footer {
+  display: none;
+  justify-content: space-between;
+  font-size: 14px;
+  transition: all 0.25s linear;
+
+  @include respond-to('small') {
+    display: flex;
+    margin-top: auto;
+  }
+}
+
+.works-section__project-industry {
+}
+
+.works-section__project-location {
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-image: image-url('pin.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: absolute;
+    left: -22px;
+    top: 0;
+  }
+}

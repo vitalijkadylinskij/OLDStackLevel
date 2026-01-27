@@ -1,0 +1,59 @@
+.service
+  = render 'shared/header', css: 'default', logo: true
+
+  .page__header.page__header--nodejs.container
+    .service__title Node.js<br/>#{t('home.development')}
+    .service__subtitle = t('nodejs.subtitle')
+
+  .service__section
+    .service__section-title = t('nodejs.first-section.title')
+
+    p.t-service__section-text = t('nodejs.first-section.text')
+
+    .t-service__blocks
+      .t-service__block.t-service__block--left
+        .t-service__block-title = t('nodejs.first-section.block.first-title')
+        .t-service__block-body = t('nodejs.first-section.block.first-body')
+
+      .t-service__block
+        .t-service__block-title = t('nodejs.first-section.block.second-title')
+        .t-service__block-body = t('nodejs.first-section.block.second-body')
+
+      .t-service__block.t-service__block--right
+        .t-service__block-title = t('nodejs.first-section.block.third-title')
+        .t-service__block-body = t('nodejs.first-section.block.third-body')
+
+  .service__section.service__section--dark-blue
+    .service__section-title = t('nodejs.second-section.title')
+    ul.service__section-list
+      li.service__section-list-item = t('nodejs.second-section.list.item-1')
+      li.service__section-list-item = t('nodejs.second-section.list.item-2')
+      li.service__section-list-item = t('nodejs.second-section.list.item-3')
+      li.service__section-list-item = t('nodejs.second-section.list.item-4')
+      li.service__section-list-item = t('nodejs.second-section.list.item-5')
+
+  .service__section
+    .service__section-title = t('nodejs.third-section.title')
+
+    /p.service__section-text Node.js is an open-source, cross-platform runtime environment written in JavaScript, the most popular programming language in the world. It’s biggest strengths are versatility, lightning fast speed of processing and high scalability.
+
+    .service__blocks
+      .service__block
+        .service__block-image
+          = image_tag('sailsjs.png')
+
+        .service__block-body = t('nodejs.third-section.block.first-body')
+
+      .service__block
+        .service__block-image
+          = image_tag('koajs.png')
+
+        .service__block-body = t('nodejs.third-section.block.second-body')
+
+      .service__block
+        .service__block-image
+          = image_tag('meteorjs.png')
+
+        .service__block-body = t('nodejs.third-section.block.third-body')
+
+  = render 'shared/contact_us', color: '#75B066'

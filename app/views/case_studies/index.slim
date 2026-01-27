@@ -1,0 +1,36 @@
+
+= render 'shared/header'
+
+.shared__section-title
+    .shared__width-wrapper
+        .shared__section-title__content--hasButton
+            .shared__section-title__content--hasButton__submain
+                .submain-tagline = raw t('case-studies.subtitle') 
+                / .submain-button.blue.trigger = raw t('hire-developers.request-developer')
+                .shared__section-title__content__vector.case-default
+                    = inline_svg("title-dots.svg")
+
+    .shared__width-wrapper.form
+        .title-form__search-subtitle = raw t('case-studies.find') 
+        = search_form_for @q, class: "ransack_search__form--white" do |f|
+            / = f.select :technologies_name_cont, Technology.pluck(:name), { include_blank: t('case-studies.select-tech')  }
+            = f.search_field :technologies_name_cont, placeholder:  t('case-studies.select-tech'), class: "case-studies__input"
+            = f.submit t('case-studies.search') 
+
+.list-section
+  .case-studies__title-vector-2
+    = inline_svg('case_studies/vector2.svg')
+  .shared__width-wrapper
+    ul.list-items
+        - @case_studies.each do |case_study|
+            li.list-item
+                = link_to case_study_path(case_study.path_name), class: "case-link"
+                    .img-background style="background-image: url(#{image(case_study.project_bg)})"
+                    .list-item__content.case_study--faded
+                        .list-item__content-container
+                            / .list-item__logo
+                            /     .logo__container
+                            /         img.img-logo src=image_path("case_studies/image.svg")
+                            .list-content = case_study.project_title
+    
+= render 'shared/footer'

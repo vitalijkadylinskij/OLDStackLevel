@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width initial-scale=1"
+    meta name="google-site-verification" content="A0PCI0J-Wr2vl7MNZ_yNQGVDMsqVhGA6adFobbMDDTI"
+
+    = display_meta_tags(title: "Blog STACKLEVEL")
+
+    link rel="manifest" href="/manifest.json"
+    link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ef5b35"
+    meta name="apple-mobile-web-app-title" content="STACKLEVEL"
+    meta name="application-name" content="STACKLEVEL"
+    meta name="msapplication-TileColor" content="#000000"
+    meta name="msapplication-TileImage" content="/mstile-144x144.png"
+    meta name="theme-color" content="#000000"
+
+    link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"
+    script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  body.blog
+    .blog__container
+      = yield

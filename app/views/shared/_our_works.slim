@@ -1,0 +1,36 @@
+ruby:
+  case_studies = CaseStudy.locale(I18n.locale)
+
+
+- if case_studies.length != 0
+    section.section.section-tech
+      .section__bg 
+      .section__title = raw t('home.our-works-title')
+      .section__vector = inline_svg("our-works-vector.svg")
+      .section__slider.owl-carousel.slider
+        - case_studies.each do |case_study|
+          = link_to case_study_path(case_study.path_name), class: "case-link"
+            .slider__item.case_study--faded style="background-image: url(#{case_study.project_bg}); background-size: cover" 
+              .slide__info
+                h3.slide__header = case_study.project_title
+                div
+                  div
+                    - if !project_domains(case_study).blank?
+                      h4.slide__subheader = raw t('home.slider.slide-subheader-domains');
+                      p = project_domains(case_study).join(', ')
+                  div
+                    - if !project_technologies(case_study).blank?
+                      h4.slide__subheader = raw t('home.slider.slide-subheader-technologies');
+                      p = project_technologies(case_study).join(', ')
+                / div
+                /   h4.slide__subheader = raw t('home.slider.slide-subheader-responsibilities');
+                /   p.slide__text = raw t('home.slider.slide-text-responsibilities');
+                / div
+                /   h4.slide__subheader = raw t('home.slider.slide-subheader-dev');
+                /   p.slide__text
+                
+      .section__slider-nav
+        .slider-nav__prev
+        .slider-nav__next
+        .slider__counter
+        = link_to "#{t('home.slider.button-cases')}", case_studies_path, class: "button__more-cases"

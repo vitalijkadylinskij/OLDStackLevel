@@ -1,0 +1,24 @@
+.cp__header
+  h2 Meta informations
+  .cp_header_link
+    = link_to 'RU', cp_meta_informations_path(locale: "ru"), class: 'locale_link'
+    |&nbsp;
+    = link_to 'EN', cp_meta_informations_path(locale: 'en'), class: 'locale_link'
+    |&nbsp;
+    = link_to 'All', cp_meta_informations_path(locale: nil), class: 'locale_link'
+
+.cp__content
+  - @meta_informations.each do |meta|
+    = link_to meta.page, edit_cp_meta_information_path(meta)
+    br
+    b Title:&nbsp;
+    span = meta.title
+    br
+    b Description:&nbsp;
+    span = meta.description
+    br
+    b Keywords:&nbsp;
+    span = meta.keywords
+    br
+    = link_to 'Destroy', cp_meta_information_path(meta), data: { confirm: 'Are you sure?' }, method: :delete
+    hr

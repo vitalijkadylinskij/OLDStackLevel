@@ -1,0 +1,50 @@
+= render 'shared/header'
+
+.shared__section-title
+  .shared__width-wrapper
+    .shared__section-title__content--hasButton
+      .shared__section-title__content--hasButton__submain
+        .submain-tagline = raw t('case-studies.subtitle')
+        .submain-button.blue.trigger = raw t('hire-developers.request-developer')
+        .shared__section-title__content__vector.case-default
+          = inline_svg("title-dots.svg")
+
+.hire-developers__section-main
+  .shared__width-wrapper
+    h2  = raw t('react-development.first-title')
+
+    h2 = raw t('react-development.what-is-title')
+    .hire-developers__section-main--description = raw t('react-development.what-is-desc')
+
+    h2 = t('react-development.where-to-use')
+    .hire-developers__section-main--description = t('react-development.where-to-use-title').html_safe
+    .hire-developers__section-main--description = t('react-development.where-to-use-desc').html_safe
+
+    .hire-developers__section-main--reasons
+      h2 = t('react-development.why.title')
+      h3 = t('react-development.why.title-1')
+      .hire-developers__section-main--description = t('react-development.why.desc-1')
+      h3 = t('react-development.why.title-2')
+      .hire-developers__section-main--description = t('react-development.why.desc-2')
+      h3 = t('react-development.why.title-3')
+      .hire-developers__section-main--description = t('react-development.why.desc-3')
+      h3 = t('react-development.why.title-4')
+      .hire-developers__section-main--description = t('react-development.why.desc-4')
+
+    h2 = "#{t('hire-developers.what-can-we-do')}?"
+    .hire-developers__section-main--description = t('react-development.what-can-we-do-desc')
+
+
+    .case-study__section--reviews__questions
+      .reviews__questions-item
+        = link_to '', hire_developers_path, class: 'reviews__link'
+        div = raw t('case-studies.hire-developer')
+      .reviews__questions-item
+        = link_to '',hire_team_index_path, class: 'reviews__link'
+        div = raw t('case-studies.hire-team')
+
+= render 'shared/footer'
+
+
+
+

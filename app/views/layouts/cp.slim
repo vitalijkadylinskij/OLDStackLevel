@@ -1,0 +1,68 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width initial-scale=1"
+    meta name="google-site-verification" content="A0PCI0J-Wr2vl7MNZ_yNQGVDMsqVhGA6adFobbMDDTI"
+    meta name="yandex-verification" content="1c6ec9c812d9851a"
+
+    = display_meta_tags(title: "STACKLEVEL")
+
+    link rel="manifest" href="/manifest.json"
+    link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ef5b35"
+    meta name="apple-mobile-web-app-title" content="STACKLEVEL"
+    meta name="application-name" content="STACKLEVEL"
+    meta name="msapplication-TileColor" content="#000000"
+    meta name="msapplication-TileImage" content="/mstile-144x144.png"
+    meta name="theme-color" content="#000000"
+
+    link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"
+    script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"
+
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = javascript_include_tag Ckeditor.cdn_url
+    = csrf_meta_tags
+
+
+  body.cp
+    .cp-nav
+      - color = ['#8bc34a', '#009688', '#00bcd4', '#2196f3', '#f44336', '#e91e63', '#673ab7'].sample
+      = link_to root_path, class: 'cp-nav__logo', style: "background-color: #{color};" do
+        = inline_svg('cp/logo-2.svg')
+
+      = link_to cp_blog_posts_path, class: 'cp-nav__item' do
+        .cp-nav__item-logo
+          = inline_svg('cp/blog.svg')
+        .cp-nav__item-name Blog
+
+      / = link_to cp_blog_authors_path, class: 'cp-nav__item' do
+      /   .cp-nav__item-logo
+      /     = inline_svg('cp/authors.svg')
+      /   .cp-nav__item-name Authors
+
+      = link_to cp_meta_informations_path, class: 'cp-nav__item' do
+        .cp-nav__item-logo
+          = inline_svg('cp/meta.svg')
+        .cp-nav__item-name Meta info
+
+      = link_to cp_case_studies_path, class: 'cp-nav__item' do
+        .cp-nav__item-logo
+          = inline_svg('cp/case-studies.svg')
+        .cp-nav__item-name Case studies
+
+      = link_to cp_hire_developers_path, class: 'cp-nav__item' do
+        .cp-nav__item-logo
+          = inline_svg('cp/case-studies.svg')
+        .cp-nav__item-name Hire Developers
+      = link_to cp_feedbacks_path, class: 'cp-nav__item' do
+        .cp-nav__item-logo
+          = inline_svg('cp/blog.svg')
+        .cp-nav__item-name Feedbacks
+      = link_to cp_careers_path, class: 'cp-nav__item' do
+        .cp-nav__item-logo
+          = inline_svg('cp/authors.svg')
+        .cp-nav__item-name Careers
+    .cp-body
+      = yield
