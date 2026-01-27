@@ -3,7 +3,9 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Koyeb/Docker images may not include fog providers by default.
   # Use local file storage unless explicitly enabled via env.
-  storage((ENV['CARRIERWAVE_STORAGE'].to_s.downcase == 'fog') ? :fog : :file)
+  def store_dir
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
 
   version :social_networks do
     process resize_to_fit: [1024, 512]

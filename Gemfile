@@ -26,7 +26,6 @@ gem 'chosen-rails', '~> 1.8'
 gem 'trix'
 gem 'mini_racer', platforms: :ruby
 gem 'ransack', '~> 2.4'
-gem 'fog-aws'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
