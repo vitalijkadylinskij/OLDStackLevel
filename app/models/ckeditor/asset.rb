@@ -1,5 +1,4 @@
-# Явно подключаем базовый класс CKEditor для ActiveRecord
-require 'ckeditor/orm/active_record'
+# frozen_string_literal: true
 
 class Ckeditor::Asset < Ckeditor::Orm::ActiveRecord::Asset
   include Ckeditor::Orm::ActiveRecord::AssetBase
@@ -8,4 +7,3 @@ class Ckeditor::Asset < Ckeditor::Orm::ActiveRecord::Asset
 
   validates :data, presence: true
 end
-

@@ -1,11 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
-mkdir -p tmp/pids
-mkdir -p log
+bundle exec rails db:prepare
 
-chmod -R 777 tmp log
-
-rm -f tmp/pids/server.pid
-
-exec "$@"
+exec bundle exec rails server -b 0.0.0.0 -p $PORT
