@@ -1,3 +1,2 @@
-class Ckeditor::Asset < Ckeditor::ApplicationRecord
-  include Ckeditor::Orm::ActiveRecord::Asset
+class Ckeditor::Asset < Ckeditor::Orm::ActiveRecord::Asset
 end
