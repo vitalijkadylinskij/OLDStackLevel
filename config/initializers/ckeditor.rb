@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+if defined?(Ckeditor)
 # Use this hook to configure ckeditor
 Ckeditor.setup do |config|
   # ==> ORM configuration
@@ -52,4 +52,5 @@ Ckeditor.setup do |config|
   # Used when CKEditor CDN enabled
   # By default: "ckeditor/config.js"
   # config.js_config_url = 'ckeditor/config.js'
+end
 end
