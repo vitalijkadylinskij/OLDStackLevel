@@ -1,7 +1,9 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
-  storage :fog
+  # Koyeb/Docker images may not include fog providers by default.
+  # Use local file storage unless explicitly enabled via env.
+  storage((ENV['CARRIERWAVE_STORAGE'].to_s.downcase == 'fog') ? :fog : :file)
 
   version :social_networks do
     process resize_to_fit: [1024, 512]
