@@ -14,6 +14,7 @@ development:
 production:
   <<: *default
   database: <%= ENV['POSTGRES_DB'] || 'stacklevel_production' %>
+  host: <%= ENV['POSTGRES_HOST'] %>
 
 
 
