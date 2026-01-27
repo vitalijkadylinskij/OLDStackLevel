@@ -1,5 +1,5 @@
 class Cp::OrderRequestsController < ControlPanelController
-  before_filter :load_order_request, only: [:show]
+  before_action :some_method
   # skip_before_filter :authenticate_user!, only: [:create]
 
   def index
