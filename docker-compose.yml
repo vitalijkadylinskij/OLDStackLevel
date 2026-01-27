@@ -18,12 +18,11 @@ services:
     build: .
     volumes:
       - .:/app
-    depends_on:
-      - db
+      
     environment:
-      DATABASE_URL: postgres://postgres:mysecretpassword@db:5432/stacklevel_development
-    ports:
-      - "3000:3000"
-    command: bash -c "rm -f tmp/pids/server.pid && rails server -b 0.0.0.0"
+      RAILS_ENV: production
+      SECRET_KEY_BASE: 1fb6edd48e7932af0c3da5d06b7006c5081499aeba3c1bcd3ee49cde6d8a2ed4a4898d12f8ba14dc32a4be79c5ae0876b163d83647d21db335a276ef24f2e4ac
+      PORT: 8080  # Railway прокидывает $PORT
+    command: bash -c "rm -f tmp/pids/server.pid && rails db:migrate && rails server -b 0.0.0.0 -p $PORT"
 volumes:
   db_data:
