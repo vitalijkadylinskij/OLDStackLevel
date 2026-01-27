@@ -2,18 +2,22 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  host: <%= ENV['POSTGRES_HOST'] %>
-  port: <%= ENV['POSTGRES_PORT'] %>
-  username: <%= ENV['POSTGRES_USER'] %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>       # хост из Railway TCP, например turntable.proxy.rlwy.net
+  port: <%= ENV['POSTGRES_PORT'] %>       # порт из Railway TCP, например 49158
+  username: <%= ENV['POSTGRES_USER'] %>   # postgres
+  password: <%= ENV['POSTGRES_PASSWORD'] %> # пароль из Railway
+  # Не указываем database здесь — указываем отдельно для dev/test/prod
 
 development:
   <<: *default
-  database: <%= ENV['POSTGRES_DB'] %>
+  database: <%= ENV['POSTGRES_DB'] || 'railway' %>
+
+test:
+  <<: *default
+  database: <%= ENV['POSTGRES_TEST_DB'] || 'railway_test' %>
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
-  url: <%= ENV["DATABASE_URL"] %>
+  <<: *default
+  # В production лучше использовать DATABASE_URL, тогда Rails сам разберёт хост/порт/пользователя/базу/пароль
+  url: <%= ENV['DATABASE_URL'] %>
 
