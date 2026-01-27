@@ -37,9 +37,5 @@ COPY . .
 COPY entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 
-# Открываем порт
-EXPOSE 3000
-
 # 🔥 ENTRYPOINT + CMD (ОЧЕНЬ ВАЖНО)
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
