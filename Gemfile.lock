@@ -353,7 +353,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave (~> 2.2)
   chosen-rails (~> 1.8)
-  ckeditor (~> 4.2.1)
+  ckeditor (~> 4.2.4)
   coffee-rails (~> 4.2)
   devise (~> 4.7)
   ffi (~> 1.13.1)
