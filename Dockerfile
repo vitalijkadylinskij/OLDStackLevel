@@ -37,9 +37,10 @@ COPY . .
 COPY entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 
-# Открываем порт
+# Указываем порт
+ENV PORT 3000
 EXPOSE 3000
 
 # 🔥 ENTRYPOINT + CMD (ОЧЕНЬ ВАЖНО)
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
+CMD rm -f tmp/pids/server.pid && bundle exec rails server -b 0.0.0.0 -p $PORT
