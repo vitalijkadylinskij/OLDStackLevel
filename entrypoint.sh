@@ -2,7 +2,6 @@
 set -e
 
 echo "Creating database (if not exists)..."
-bundle exec rails db:create || true
 
 echo "Running migrations..."
 bundle exec rails db:migrate
