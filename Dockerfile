@@ -20,7 +20,7 @@ WORKDIR /app
 
 # Устанавливаем bundler и rails
 RUN gem install bundler -v 1.17.3
-RUN gem install rails -v 5.2.4 --ignore-dependencies
+RUN gem install rails -v 5.2.8.1 --ignore-dependencies
 
 # Копируем Gemfile и ставим гемы
 COPY Gemfile Gemfile.lock ./
@@ -33,9 +33,9 @@ RUN mkdir -p /app/tmp /app/log && chmod -R 777 /app/tmp /app/log
 # Копируем весь проект
 COPY . .
 
-# 🔥 КОПИРУЕМ ENTRYPOINT
+# Копируем entrypoint
 COPY entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 
-# 🔥 ENTRYPOINT + CMD (ОЧЕНЬ ВАЖНО)
+# ENTRYPOINT
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]

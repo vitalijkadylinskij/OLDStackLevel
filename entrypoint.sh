@@ -1,18 +1,23 @@
 #!/bin/bash
 set -e
 
-# 🔥 Удаляем старый PID Puma, если он остался после предыдущего запуска
-rm -f /app/tmp/pids/server.pid
+# Удаляем старый PID, если он остался
+if [ -f /app/tmp/pids/server.pid ]; then
+  echo "Removing old server.pid"
+  rm /app/tmp/pids/server.pid
+fi
 
-# 🔥 Прогоняем миграции (можно отключить, если не нужно)
-echo "Running migrations..."
-bundle exec rails db:migrate RAILS_ENV=production || true
-
-# 🔥 Очищаем кэш Rails
+# Очищаем tmp
 bundle exec rails tmp:cache:clear
 bundle exec rails tmp:sockets:clear
 bundle exec rails tmp:pids:clear
 
-# 🔥 Запуск Puma на всех IP и порту, который задаёт Railway
+# (Опционально) Можно запускать миграции, если база готова
+# echo "Running migrations..."
+# bundle exec rails db:migrate RAILS_ENV=production || true
+
+# Запуск Rails на всех интерфейсах и нужном порту
 echo "Starting Rails server..."
 exec bundle exec rails server -b 0.0.0.0 -p ${PORT:-3000}
+
+
