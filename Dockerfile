@@ -37,10 +37,13 @@ COPY . .
 COPY entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 
-# Указываем порт
-ENV PORT 3000
+# Устанавливаем переменные окружения
+ENV RAILS_ENV=production
+ENV PORT=3000
+
+# Экспонируем порт
 EXPOSE 3000
 
-# 🔥 ENTRYPOINT + CMD (ОЧЕНЬ ВАЖНО)
+# Используем entrypoint для старта контейнера
 ENTRYPOINT ["entrypoint.sh"]
-CMD rm -f tmp/pids/server.pid && bundle exec rails server -b 0.0.0.0 -p $PORT
+

@@ -1,8 +1,13 @@
 #!/bin/bash
+set -e
 
-# 🔹 (Опционально) Миграции можно включить, если база готова
-echo "Running migrations..."
-bundle exec rails db:migrate RAILS_ENV=production || true
-
+# Удаляем старый PID, если он есть
 rm -f tmp/pids/server.pid
-bundle exec rails server -b 0.0.0.0 -p $PORT
+
+# Выполняем миграции
+echo "Running database migrations..."
+bundle exec rails db:migrate
+
+# Запускаем сервер
+echo "Starting Rails server..."
+bundle exec rails server -b 0.0.0.0 -p ${PORT:-3000}
