@@ -1,9 +1,6 @@
-# frozen_string_literal: true
-
-#class Ckeditor::Picture < Ckeditor::Asset
-  #mount_uploader :data, CkeditorPictureUploader, mount_on: :data_file_name
-
-  #def url_content
-    #url(:content)
-  #end
-#end
+module Ckeditor
+  class Picture < Asset
+    # Только специфичное для картинок
+    has_one_attached :data # если используете ActiveStorage
+  end
+end
