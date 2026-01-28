@@ -22,18 +22,19 @@ WORKDIR /app
 RUN gem install bundler -v 1.17.3
 RUN gem install rails -v 5.2.8.1 --ignore-dependencies
 
-# Копируем Gemfile и ставим гемы
+# Копируем Gemfile и устанавливаем гемы
 COPY Gemfile Gemfile.lock ./
 RUN bundle config set force_ruby_platform true
 RUN bundle install --jobs 4
 
-# Создаем tmp и log и даем полные права
-RUN mkdir -p /app/tmp /app/log && chmod -R 777 /app/tmp /app/log
+# 🔹 Создаем все tmp-папки и log с правильными правами
+RUN mkdir -p /app/tmp/pids /app/tmp/cache /app/tmp/sockets /app/log && \
+    chmod -R 777 /app/tmp /app/log
 
 # Копируем весь проект
 COPY . .
 
-# Копируем entrypoint
+# Копируем entrypoint и даем права
 COPY entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 
