@@ -4,9 +4,5 @@ default: &default
   pool: 5
   url: <%= ENV['DATABASE_URL'] %>
 
-development:
-  <<: *default
-
 production:
   <<: *default
-
