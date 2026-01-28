@@ -17,8 +17,8 @@ bundle exec rails tmp:sockets:clear
 bundle exec rails tmp:pids:clear
 
 # 🔹 (Опционально) Миграции можно включить, если база готова
-# echo "Running migrations..."
-# bundle exec rails db:migrate RAILS_ENV=production || true
+echo "Running migrations..."
+bundle exec rails db:migrate RAILS_ENV=production || true
 
 # 🔹 Старт Rails на всех интерфейсах и порту Railway
 echo "Starting Rails server..."
