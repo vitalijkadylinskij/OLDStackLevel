@@ -21,6 +21,7 @@ services:
       
     environment:
       RAILS_ENV: production
+      RAILS_SERVE_STATIC_FILES: "true"
       SECRET_KEY_BASE: 1fb6edd48e7932af0c3da5d06b7006c5081499aeba3c1bcd3ee49cde6d8a2ed4a4898d12f8ba14dc32a4be79c5ae0876b163d83647d21db335a276ef24f2e4ac
       PORT: 8080  # Railway прокидывает $PORT
     command: bash -c "rm -f tmp/pids/server.pid && rails db:migrate && rails server -b 0.0.0.0 -p $PORT"
